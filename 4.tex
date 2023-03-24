@@ -99,6 +99,24 @@
   设 $V$ 是 $\mathbb{K}$ 上的线性空间，则 $\mathcal{L}(V)$ 是 $\mathbb{K}$ 上的代数。
 \end{theorem}
 
+\begin{proposition}
+  在 $\mathcal{L}(V)$ 中，定义线性变换 $\varphi$ 的 $n$ 次幂为 $n$ 个 $\varphi$ 的复合，则
+  \[\varphi^n \circ \varphi^m = \varphi^{n + m},\, (\varphi^n)^m = \varphi^{nm}\]
+  若 $\varphi$ 是双射，即 $\varphi$ 是 $V$ 上的自同构，则 $\varphi^{-1}$ 也是 $V$ 上的线性变换，而且也是自同构，称 $\varphi^{-1}$ 是 $\varphi$ 的逆变换。定义
+  \[\varphi^{-n} = (\varphi^{-1})^n\]
+  则
+  \[\varphi^{-n} = (\varphi^n)^{-1}\]
+  定义
+  \[\varphi^0 = I_V\]
+  $\varphi$ 的负数次幂仅对自同构（又称可逆变换或非异变换）有意义。
+\end{proposition}
+
+\begin{proposition}
+  若 $\varphi$ 和 $\psi$ 都是可逆线性变换，则 $\varphi \circ \psi$ 也是可逆线性变换，且
+  \[(\varphi \circ \psi)^{-1} = \psi^{-1} \circ \varphi^{-1}\]
+  对任意 $k \ne 0$，若 $\varphi$ 可逆，则 $k\varphi$ 也可逆，且
+  \[(k\varphi)^{-1} = k^{-1}\varphi^{-1}\]
+\end{proposition}
 
 
 %——————————————————————————————————%
