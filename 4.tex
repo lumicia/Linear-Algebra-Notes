@@ -59,8 +59,45 @@
 
 \section{线性映射的运算}
 
+\begin{definition}
+    设 $\varphi,\psi$ 是 $\mathbb{K}$ 上线性空间 $V \to U$ 的线性映射。定义 $\varphi + \psi$ 为 $V \to U$ 的映射：
+    \[(\varphi + \psi)(\alpha) = \varphi(\alpha) + \psi(\alpha),\, \alpha \in  V\]
+    若 $k \in \mathbb{K}$，定义 $k\varphi$ 为 $V \to U$ 的映射：
+    \[(k\varphi)(\alpha) = k\varphi(\alpha),\, \alpha \in V\]
+\end{definition}
 
+\begin{proposition}
+    上面定义的映射 $\varphi + \psi$ 和 $k\varphi$ 都是线性映射。
+\end{proposition}
 
+\begin{proposition}
+    设 $\mathcal{L}(V,U)$ 是 $V \to U$ 的线性映射的全体，则在线性映射 $\varphi + \psi$ 和 $k\varphi$ 下，$\mathcal{L}(V,U)$ 是 $\mathbb{K}$ 上的线性空间。
+
+    特别地，$V \to \mathbb{K}$ 的所有线性函数全体构成一个线性空间，称为 $V$ 的共轭空间，记为 $V^*$。当 $V$ 是有限维空间时，$V^*$ 称为 $V$ 的对偶空间。
+\end{proposition}
+
+\begin{remark}
+    若 $U = \mathbb{K}$，即把 $\mathbb{K}$ 看成 $\mathbb{K}$ 上的一维空间，则 $V \to \mathbb{K}$ 的线性映射称为线性函数。
+\end{remark}
+
+\begin{remark}
+  若 $V = U$，则 $\mathcal{L}(V,V)$ 是 $V$ 上线性变换的全体构成的线性空间，简记为 $\mathcal{L}(V)$。$\mathcal{L}(V)$ 上还有乘法运算，即映射的复合。
+\end{remark}
+
+\begin{definition}
+  设 $A$ 是 $\mathbb{K}$ 上的线性空间。若在 $A$ 上定义了乘法 $\cdot$（可省略），使得对 $\forall a,b,c \in A$，及 $k \in \mathbb{K}$，满足
+  \begin{enumerate}
+    \item $a(bc) = (ab)c$；
+    \item $\exists e \in A,\, ea = ae = a$；
+    \item $a(b + c) = ab + ac,\, (b + c)a = ba + ca$；
+    \item $(ka)b = k(ab) = a(kb)$。
+  \end{enumerate}
+  则称 $A$ 是 $\mathbb{K}$ 上的代数，$e$ 称为 $A$ 的幺元。
+\end{definition}
+
+\begin{theorem}
+  设 $V$ 是 $\mathbb{K}$ 上的线性空间，则 $\mathcal{L}(V)$ 是 $\mathbb{K}$ 上的代数。
+\end{theorem}
 
 
 
