@@ -2,7 +2,139 @@
 
 %——————————————————————————————————%
 
-\section{}
+\section{线性空间}
+
+\begin{definition}{数域}
+  设 $\mathbb{K}$ 是复数集 $\mathbb{C}$ 的子集，且至少是两个不同的元素。若 $\mathbb{K}$ 中任意两个数的加法、减法、乘法下封闭（除数不为零）仍属于 $\mathbb{K}$，则称 $\mathbb{K}$ 是一个数域。
+\end{definition}
+
+\begin{theorem}
+  任一数域必定包含有理数域 $\mathbb{Q}$。
+\end{theorem}
+
+\begin{definition}{向量}
+  设数域 $\mathbb{K}$，$a_1,a_2, \ldots ,a_n$ 是 $\mathbb{K}$ 中的元素。由 $a_1,a_2, \ldots ,a_n$ 组成的有序数组 $(a_1,a_2, \ldots ,a_n)$ 称为 $\mathbb{K}$ 上的 $n$ 维行向量。有序数组
+  \[
+    \begin{pmatrix}
+      a_1    \\
+      a_2    \\
+      \vdots \\
+      a_n
+    \end{pmatrix}
+  \]
+  称为 $\mathbb{K}$ 上的 $n$ 维列向量。为了方便，$n$ 维列向量常记为 $n$ 维行向量的转置形式：$(a_1,a_2, \ldots a_n)^{\mathrm{T}}$。
+
+  行向量和列向量统称为向量。
+\end{definition}
+
+\begin{remark}
+  $n$ 维行向量可以看成 $1 \times n$ 矩阵，$n$ 维列向量可以看成 $n \times 1$ 矩阵。而且向量运算规则与矩阵的相应运算规则相同。
+\end{remark}
+
+\begin{proposition}
+  两个向量相等当且仅当它们的元素相同，且元素出现的次序也相同。
+\end{proposition}
+
+\begin{definition}{零向量}
+  若一个 $n$ 维向量的所有元素都为零，则称它为零向量，记为 $\bm{0}$。
+\end{definition}
+
+\begin{definition}{负向量}
+  令向量 $\bm{\alpha} = (a_1,a_2, \ldots ,a_n)$。则记 $\bm{\alpha}$ 的负向量 $-\bm{\alpha} = -(a_1,a_2, \ldots ,a_n)$。
+\end{definition}
+
+\begin{proposition}{向量运算规则}
+  \begin{enumerate}
+    \item $\bm{\alpha} + \bm{\beta} = \bm{\beta} + \bm{\alpha}$；
+    \item $(\bm{\alpha} + \bm{\beta}) + \bm{\gamma} = \bm{\alpha} + (\bm{\beta} + \bm{\gamma})$；
+    \item $\bm{\alpha} + \bm{0} = \bm{\alpha}$；
+    \item $\bm{\alpha} + (-\bm{\alpha}) = \bm{0}$；
+    \item $1 \cdot\bm{\alpha}= \bm{\alpha}$；
+    \item $k(\bm{\alpha} + \bm{\beta}) = k\bm{\alpha} + k\bm{\beta}, k \in \mathbb{K}$；
+    \item $(k + l)\bm{\alpha} = k\bm{\alpha} + l\bm{\alpha}$；
+    \item $k(l\bm{\alpha}) = (kl)\bm{\alpha}$。
+  \end{enumerate}
+\end{proposition}
+\begin{remark}
+  二维实向量加法的几何意义是平行四边形法则；数乘的几何意义是原向量的同向或反向的倍数。
+\end{remark}
+
+\begin{definition}
+  数域 $\mathbb{K}$ 上的 $n$ 维行向量全体组成的集合称为 $\mathbb{K}$ 上的 $n$ 维行向量空间。
+  数域 $\mathbb{K}$ 上的 $n$ 维列向量全体组成的集合称为 $\mathbb{K}$ 上的 $n$ 维列向量空间。
+\end{definition}
+
+\begin{definition}{线性空间}
+  设数域 $\mathbb{K}$，集合 $V$。若在 $V$ 上定义加法运算 “$+$”：对 $\bm{\alpha},\bm{\beta} \in V$，$\exists !\bm{\gamma}$ 与之对应，记为 $\bm{\gamma} = \bm{\alpha} + \bm{\beta}$。在 $\mathbb{K}$ 和 $V$ 之间定义数乘运算：对 $\forall k \in \mathbb{K}, \bm{\alpha}\in V$，$\exists !\bm{\delta}\in V$ 与之对应，记为 $\bm{\delta} = k\bm{\alpha}$。若上述加法和数乘满足：
+  \begin{enumerate}
+    \item $\bm{\alpha} + \bm{\beta} = \bm{\beta} + \bm{\alpha}$；
+    \item $(\bm{\alpha} + \bm{\beta}) + \bm{\gamma} = \bm{\alpha} + (\bm{\beta} + \bm{\gamma})$；
+    \item $\exists \bm{0}\in V, \forall \bm{\alpha}\in V, \bm{\alpha} + \bm{0} = \bm{\alpha}$；
+    \item $\forall \bm{\alpha} \in V, \exists \bm{\beta} \in V, \bm{\alpha} + (-\bm{\alpha}) = \bm{0}$；
+    \item $1 \cdot\bm{\alpha}= \bm{\alpha}$；
+    \item $k(\bm{\alpha} + \bm{\beta}) = k\bm{\alpha} + k\bm{\beta}$；
+    \item $(k + l)\bm{\alpha} = k\bm{\alpha} + l\bm{\alpha}$；
+    \item $k(l\bm{\alpha}) = (kl)\bm{\alpha}$。
+  \end{enumerate}
+  其中 $\bm{\alpha},\bm{\beta},\bm{\gamma}$ 是 $V$ 中任意元素，$k,l$ 是 $\mathbb{K}$ 中任意元素，则集合 $V$ 称为 $\mathbb{K}$ 上的线性空间或向量空间。$V$ 中的元素称为向量，$V$ 中满足（3）的元素 $\bm{0}$ 称为零向量，满足（4）的 $\bm{\beta}$ 称为 $\bm{\alpha}$ 的负向量，记为 $-\bm{\alpha}$。
+\end{definition}
+
+\hfill
+
+\begin{example}
+  数域 $\mathbb{K}$ 上的 $n$ 维行向量集合（列向量集合）是 $\mathbb{K}$ 上的线性空间，记为 $\mathbb{K}^n(\mathbb{K}_n)$。
+\end{example}
+
+\hfill
+
+\begin{example}
+  系数取自数域 $\mathbb{K}$ 的一元多项式的全体，记为 $\mathbb{K}[x]$，则 $\mathbb{K}[x]$ 是 $\mathbb{K}$ 上的线性空间。
+
+  在 $\mathbb{K}[x]$ 中取次数小于等于 $n$ 的多项式全体，记为 $\mathbb{K}_n[x]$，则 $\mathbb{K}_n[x]$ 也是 $\mathbb{K}$ 上的线性空间。
+\end{example}
+
+\hfill
+
+\begin{example}
+  复数域 $\mathbb{C}$ 可以看成实数域 $\mathbb{R}$ 上的线性空间。
+\end{example}
+
+\begin{remark}
+  一般地，若两个数域 $\mathbb{K}_1 \subseteq \mathbb{K}_2$，则 $\mathbb{K}_2$ 可以看成 $\mathbb{K}_1$ 上的线性空间。特别地，$\mathbb{K}$ 可以看成 $\mathbb{K}$ 自身上的线性空间。
+\end{remark}
+
+\begin{proposition}
+  零向量唯一。
+\end{proposition}
+
+\begin{proposition}
+  负向量唯一。
+\end{proposition}
+
+\begin{proposition}
+  对 $\forall \bm{\alpha},\bm{\beta},\bm{\gamma} \in V$，有
+  \begin{enumerate}
+    \item $\bm{\alpha} + \bm{\beta} = \bm{\alpha} + \bm{\gamma} \implies \bm{\beta} = \bm{\gamma}$；
+    \item $0\cdot\bm{\alpha} = \bm{0}$；
+    \item $k\cdot\bm{0} = \bm{0}$；
+    \item $(-1)\bm{\alpha} = -\bm{\alpha}$；
+    \item $k\bm{\alpha} = 0 \implies \bm{\alpha} = 0$ 或 $k = 0$。
+  \end{enumerate}
+\end{proposition}
+
+\begin{proposition}{线性空间相等}
+  两个线性空间 $V$ 和 $U$ 相等当且仅当 $V$ 的基和 $U$ 的基可以互相线性表示。
+\end{proposition}
+
+\begin{remark}
+  线性空间本质是集合，因此证明两个线性空间相等可以证明二者互相包含。
+\end{remark}
+
+
+
+%——————————————————————————————————%
+
+\section{向量的线性关系}
 
 
 
@@ -11,7 +143,7 @@
 
 %——————————————————————————————————%
 
-\section{}
+\section{向量组的秩}
 
 
 
@@ -20,7 +152,7 @@
 
 %——————————————————————————————————%
 
-\section{}
+\section{矩阵的秩}
 
 
 
@@ -29,7 +161,7 @@
 
 %——————————————————————————————————%
 
-\section{}
+\section{坐标向量}
 
 
 
@@ -38,7 +170,7 @@
 
 %——————————————————————————————————%
 
-\section{}
+\section{基变换与过渡矩阵}
 
 
 
@@ -47,7 +179,7 @@
 
 %——————————————————————————————————%
 
-\section{}
+\section{子空间}
 
 
 
@@ -56,7 +188,7 @@
 
 %——————————————————————————————————%
 
-\section{}
+\section{线性方程组的解}
 
 
 
@@ -64,47 +196,3 @@
 
 
 %——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
