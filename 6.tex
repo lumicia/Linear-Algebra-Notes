@@ -1,0 +1,234 @@
+\chapter{特征值}
+
+%——————————————————————————————————%
+
+\section{特征值和特征向量}
+
+\begin{definition}
+    设 $\varphi$ 是数域 $\mathbb{K}$ 上线性空间 $V$ 上的线性变换。若 $\lambda_0 \in \mathbb{K}, \bm{x} \in V$ 且 $\bm{x} \neq 0$，使
+    \[
+        \varphi\bm{x} = \lambda_{0}\bm{x}
+    \]
+    则称 $\lambda_0$ 是线性变换 $\varphi$ 的特征值，向量 $\bm{x}$ 称为 $\varphi$ 关特征值 $\lambda_0$ 的特征向量。
+\end{definition}
+
+\begin{remark}
+    $\varphi$ 关于特征值 $\lambda_0$ 的全体特征向量加上零向量构成 $V$ 的子空间，记为 $V_{\lambda_{0}}$，称为 $\varphi$ 的关于特征值 $\lambda_0$ 的特征子空间。显然 $V_{\lambda_{0}}$ 是不变子空间。
+\end{remark}
+
+\begin{definition}
+    设 $\bm{A}$ 上数域 $\mathbb{K}$ 上的 $n$ 阶方阵。若 $\exists \lambda_0 \in \mathbb{K}$ 及 $n$ 维非零列向量 $\bm{\alpha}$ 使得
+    \[
+        \bm{A\alpha} = \lambda_{0}\bm{\alpha}
+    \]
+    成立，则称 $\lambda_0$ 为矩阵 $\bm{A}$ 的特征值，$\bm{\alpha}$ 为 $\bm{A}$ 关于特征值 $\lambda_0$ 的特征向量。齐次线性方程组
+    \[
+        (\lambda_{0}\bm{I}_n - \bm{A})\bm{x} = 0
+    \]
+    的解空间 $V_{\lambda_{0}}$ 称为 $\bm{A}$ 关于特征值 $\lambda_0$ 的特征子空间。
+\end{definition}
+
+\begin{definition}
+    设 $\bm{A}$ 是 $n$ 阶方阵，称 $\vert \lambda \bm{I}_n - \bm{A} \vert$ 为 $\bm{A}$ 的特征多项式。
+\end{definition}
+
+\begin{theorem}
+    若 $\bm{B}$ 与 $\bm{A}$ 相似，则 $\bm{B}$ 与 $\bm{A}$ 有相同的特征多项式，从而具有相同的特征值（计重数）。
+\end{theorem}
+
+\begin{definition}
+    设 $\varphi$ 是线性空间 $V$ 上的线性变换，$\varphi$ 在 $V$ 上的某组基下的表示矩阵为 $\bm{A}$，由上面的定理可知 $\left\vert \lambda \bm{I}_n - \bm{A} \right\vert$ 与基或表示矩阵的选取无关，称 $\left\vert \lambda \bm{I}_n - \bm{A} \right\vert$ 为 $\varphi$ 的特征多项式，记为 $\left\vert \lambda \bm{I}_V - \varphi \right\vert$。
+\end{definition}
+
+\begin{theorem}
+    任一复方阵必定相似于一上三角阵。
+\end{theorem}
+
+\begin{proposition}
+    设 $n$ 阶矩阵 $\bm{A}$ 的全体特征值为 $\lambda_1, \lambda_2, \ldots, \lambda_n$，多项式 $f(x) = a_{m}x^{m} + a_{m - 1}x^{m - 1} + \cdots +a_{1}x + a_{0}$。记
+    \[f(\bm{A}) = a_{m}\bm{A}^{m} + a_{m - 1}\bm{A}^{m - 1} + \cdots +a_{1}\bm{A} + a_{0}\bm{I}_n\]
+    则 $f(\bm{A})$ 的全部特征值为 $f(\lambda_1), f(\lambda_2), \ldots, f(\lambda_n)$。
+\end{proposition}
+
+\begin{proposition}
+    设 $n$ 阶矩阵 $\bm{A}$ 适合多项式 $g(x)$，即 $g(\bm{A}) = \bm{O}$，则 $\bm{A}$ 的任一特征值 $\lambda_0$ 也必定适合 $g(x)$，即 $g(\lambda_0) = 0$。
+\end{proposition}
+
+\begin{proposition}
+    设 $n$ 阶矩阵 $\bm{A}$ 是可逆阵，且 $\bm{A}$ 的全部特征值为 $\lambda_1, \lambda_2, \ldots , \lambda_n$，则 $\bm{A}^{-1}$ 的全部特征值为 $\lambda_{1}^{-1}, \lambda_{2}^{-1}, \ldots ,\lambda_{n}^{-1}$。
+\end{proposition}
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{对角化}
+
+\begin{definition}
+    若 $n$ 维线性空间 $V$ 上的线性变换 $\varphi$ 在某组基下 $\{e_1, e_2, \ldots , e_n\}$ 下的表示矩阵为对角阵
+    \[
+        \begin{pmatrix}
+            \lambda_1 & \         & \      & \         \\
+            \         & \lambda_2 & \      & \         \\
+            \         & \         & \ddots & \         \\
+            \         & \         & \      & \lambda_n
+        \end{pmatrix}
+    \]
+    则称 $\varphi$ 为可对角化线性变换。此时 $\varphi(e_{i}) = \lambda_{i}e_{i}$，即 $e_1, e_2, \ldots , e_n$ 是 $\varphi$ 的特征向量，于是 $\varphi$ 有 $n$ 个线性无关的特征向量。
+\end{definition}
+
+\begin{theorem}{$\varphi$ 可对角化的第一个充分必要条件}
+    设 $\varphi$ 是 $n$ 维线性空间 $V$ 上的线性变换，则 $\varphi$ 可对角化的充分必要条件是 $\varphi$ 有 $n$ 个线性无关的特征向量。
+\end{theorem}
+
+\begin{definition}
+    设 $\bm{A}$ 是 $n$ 阶矩阵，若 $\bm{A}$ 相似于对角阵，即存在可逆阵 $\bm{P}$ 使得 $\bm{P}^{-1}\bm{AP}$ 为对角阵，则称 $\bm{A}$ 是可对角化矩阵。
+\end{definition}
+
+\begin{theorem}{$\bm{A}$ 可对角化的第一个充分必要条件}
+    设 $\bm{A}$ 是 $n$ 阶矩阵，则 $\bm{A}$ 可对角化的充分必要条件是 $\bm{A}$ 有 $n$ 个线性无关的特征向量。
+\end{theorem}
+
+\begin{theorem}
+    若 $\lambda_1, \lambda_2, \ldots , \lambda_n$ 为 $n$ 为线性空间 $V$ 上的线性变换 $\varphi$ 的不同的特征值，则
+    \[
+        V_1 + V_2 + \cdots + V_k = V_1 \oplus V_2 \oplus \cdots \oplus V_k
+    \]
+\end{theorem}
+
+\begin{corollary}
+    线性变换 $\varphi$ 属于不同特征值的特征向量必定线性无关。
+\end{corollary}
+
+\begin{corollary}
+    若 $n$ 维线性空间 $V$ 上的线性变换 $\varphi$ 有 $n$ 个不同的特征值，则 $\varphi$ 必定可对角化。
+\end{corollary}
+
+\begin{theorem}{$\varphi$ 可对角化的第二个充分必要条件}
+    设 $\varphi$ 是 $n$ 维线性空间 $V$ 上的线性变换，$\lambda_1, \lambda_2, \ldots , \lambda_k$ 是 $\varphi$ 的全部不同特征值，$V_i(i = 1, 2, \cdots, k)$ 是特征值 $\lambda_i$ 的特征子空间，则 $\varphi$ 可对角化的充分必要条件是
+    \[
+        V = V_1 \oplus V_2 \oplus \cdots \oplus V_k
+    \]
+\end{theorem}
+
+\begin{theorem}{$\bm{A}$ 可对角化的第二个充分必要条件}
+    设 $\bm{A}$ 是 $n$ 阶矩阵，$\lambda_1, \lambda_2, \ldots , \lambda_k$ 是 $\bm{A}$ 的全部不同特征值，$V_i(i = 1, 2, \cdots, k)$ 是特征值 $\lambda_i$ 的特征子空间，则 $\bm{A}$ 可对角化的充分必要条件是
+    \[
+        V = V_1 \oplus V_2 \oplus \cdots \oplus V_k
+    \]
+\end{theorem}
+
+\begin{definition}
+    设 $\varphi$ 是 $n$ 维线性空间 $V$ 上的线性变换，$\lambda_0$ 是 $\varphi$ 的特征值，$V_0$ 是属于 $\lambda_0$ 的特征子空间，称 $\dim V_0$ 为 $\lambda_0$ 的度数或几何重数。 $\lambda_0$ 作为 $\varphi$ 的特征多项式根的重数称为 $\lambda_0$ 的重数或代数重数。
+\end{definition}
+
+\begin{lemma}
+    设 $\varphi$ 是 $n$ 维线性空间 $V$ 上的线性变换，$\lambda_0$ 是 $\varphi$ 的特征值，则 $\lambda_0$ 的度数总是小于等于 $\lambda_0$ 的度数。
+\end{lemma}
+
+\begin{definition}
+    设 $\varphi$ 是 $n$ 维线性空间 $V$ 上的线性变换。若 $\varphi$ 的任一特征值的度数等于重数，则称 $\varphi$ 有完全的特征向量系。
+\end{definition}
+
+\begin{theorem}{$\varphi$ 可对角化的第三个充分必要条件}
+    设 $\varphi$ 是 $n$ 维线性空间 $V$ 上的线性变换，则 $\varphi$ 可对角化的充分必要条件是 $\varphi$ 有完全的特征向量系。
+\end{theorem}
+
+\begin{theorem}{$\bm{A}$ 可对角化的第三个充分必要条件}
+    设 $\bm{A}$ 是 $n$ 阶矩阵，则 $\bm{A}$ 可对角化的充分必要条件是 $\varphi$ 有完全的特征向量系。
+\end{theorem}
+
+
+
+%——————————————————————————————————%
+
+\section{极小多项式与 Cay-Hamilton 定理}
+
+\begin{definition}{极小多项式}
+    若 $n$ 阶矩阵 $\bm{A}$（或 $n$ 维线性空间 $V$ 上的线性变换 $\varphi$）适合非零首一多项式 $m(x)$，且 $m(x)$ 是 $\bm{A}$（或 $\varphi$）所适合的非零多项式中次数最小者，则称 $m(x)$ 是 $\bm{A}$（或 $\varphi$）的极小多项式或最小多项式。
+\end{definition}
+
+\begin{lemma}
+    若 $f(x)$ 是 $\bm{A}$ 适合的多项式，则 $\bm{A}$ 的极小多项式 $m(x)$ 整除 $f(x)$。
+\end{lemma}
+
+\begin{proposition}
+    任一 $n$ 阶矩阵的极小多项式必定唯一。
+\end{proposition}
+
+\begin{proposition}
+    相似的矩阵具有相同的极小多项式。
+\end{proposition}
+
+\begin{proposition}
+    设 $\bm{A}$ 是分块对角阵
+    \[
+        \bm{A} = \begin{pmatrix}
+            \bm{A}_{1} & \      & \      & \      \\
+            \      & \bm{A}_{2} & \      & \      \\
+            \      & \      & \ddots & \      \\
+            \      & \      & \      & \bm{A}_{n}
+        \end{pmatrix}
+    \]
+    其中 $\bm{A}_{i}$ 都是方阵，则 $\bm{A}$ 的极小多项式等于各个 $\bm{A}_{i}$ 的极小多项式的最小公倍式。
+\end{proposition}
+
+\begin{lemma}
+    设 $m(x)$ 是 $n$ 阶矩阵 $\bm{A}$ 的极小多项式，$\lambda_0$ 是 $\bm{A}$ 的特征值，则
+    \[
+        (x - \lambda_0) | m(x)
+    \]
+\end{lemma}
+
+\begin{theorem}{Cayley-Hamilton 定理}
+    设 $\bm{A}$ 是数域 $\mathbb{K}$ 上的 $n$ 阶矩阵，$f(x)$ 是 $\bm{A}$ 的特征多项式，则 $f(\bm{A}) = \bm{O}$。
+\end{theorem}
+
+\begin{corollary}
+    $n$ 阶矩阵 $\bm{A}$ 的极小多项式是其特征多项式的因式。特别地，$\bm{A}$ 的极小多项式的次数不超过 $n$。
+\end{corollary}
+
+\begin{corollary}
+    $n$ 阶矩阵 $\bm{a}$ 的极小多项式和特征多项式具有相同的根（不计重数）。
+\end{corollary}
+
+\begin{corollary}
+    设 $\varphi$ 是 $n$ 维线性空间 $V$ 上的线性变换，$f(x)$ 是 $\varphi$ 的特征多项式，则 $f(\varphi) = \bm{0}$。
+\end{corollary}
+\begin{remark}
+    该推论也被称为 Cayley-Hamilton 定理。
+\end{remark}
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{特征值的估计}
+
+\begin{theorem}{Gerschgorin 圆盘第一定理}
+    设 $\bm{A} = (a_{ij})_{n \times n}$ 是 $n$ 阶复矩阵，则 $\bm{A}$ 的特征值在复平面上的下列圆盘（又称为戈氏圆盘）中：
+    \[
+        \vert z - a_{ii} \vert \leqslant R_i,\quad i = 1, 2, \cdots, n
+    \]
+\end{theorem}
+
+\begin{theorem}
+    设
+    \[
+        f(x) = x^{n} + a_{1}x^{n - 1} + \cdots + a_{n - 1}x + a_{n}
+    \]
+    是 $n$ 次首一复系数多项式，则 $f(x)$ 的 $n$ 个根 $\lambda_1, \lambda_2, \ldots, \lambda_n$ 作为整体是 $a_1, a_2, \ldots, a_n$ 的连续函数。
+\end{theorem}
+
+\begin{theorem}
+  设 $D$是实轴上的区间，$\bm{A}: D \to M_n(\mathbb{C})$ 是取值为复矩阵的连续函数，则 $\bm{A}(t)$ 的 $n$ 个特征值 $\lambda_1(t), \lambda_2(t), \ldots, \lambda_n(t)$ 都是关于 $t$ 的连续函数。
+\end{theorem}
+
+\begin{theorem}
+  设矩阵 $\bm{A} = (a_{ij})_{n \times n}$ 的 $n$ 个戈氏圆盘分成若干个连通区域，若其中一个连通区域含有 $k$ 个戈氏圆盘，则有且只有 $k$ 个特征值落在这个连通区域内（若两个戈氏圆盘重合，需计重数；又若特征值为重根，也计重数）。
+\end{theorem}
+
