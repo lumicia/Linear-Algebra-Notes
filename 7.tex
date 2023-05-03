@@ -63,18 +63,47 @@
 \end{lemma}
 
 \begin{theorem}
-  设 $\bm{A}, \bm{B}$ 是数域 $\mathbb{K}$ 上的矩阵，则 $\bm{A}$ 与 $\bm{B}$ 相似的充分必要条件是 $\lambda$ -矩阵 $\lambda \bm{I} - \bm{A}$ 与 $\lambda \bm{I} - \bm{B}$ 相抵。
+    设 $\bm{A}, \bm{B}$ 是数域 $\mathbb{K}$ 上的矩阵，则 $\bm{A}$ 与 $\bm{B}$ 相似的充分必要条件是 $\lambda$ -矩阵 $\lambda \bm{I} - \bm{A}$ 与 $\lambda \bm{I} - \bm{B}$ 相抵。
 \end{theorem}
 
 
 
 %——————————————————————————————————%
 
-\section{}
+\section{矩阵的法式}
+
+\begin{lemma}
+    设 $\bm{A}(\lambda) = (a_{ij}(\lambda))_{m \times n}$ 是任一非零 $\lambda$ -矩阵，则 $\bm{A}(\lambda)$ 必相抵于这样的一个 $\lambda$ -矩阵 $\bm{B}(\lambda) = (b_{ij}(\lambda))_{m \times n}$，其中 $b_{11}(\lambda) \neq 0$ 且 $b_{11}(\lambda)$ 可整除 $\bm{B}(gl)$ 中的任一元素 $b_{ij}(\lambda)$。
+\end{lemma}
+
+\begin{theorem}
+    设 $\bm{A}(\lambda)$ 是 $n$ 阶 $\lambda$ -矩阵，则 $\bm{A}(\lambda)$ 相抵于对角阵
+    \[
+        \operatorname{diag}\{ d_{1}(\lambda), d_{2}(\lambda), \ldots, d_{r}(\lambda); 0, \ldots, 0 \}
+    \]
+    其中 $d_{i}(\lambda)$ 是非零首一多项式且 $d_{i}(\lambda) \mid d_{i + 1}(\lambda)(i = 1, 2, \cdots, r - 1)$。
+\end{theorem}
+
+\begin{corollary}
+    任一 $n$ 阶可逆 $\lambda$ -矩阵都可表示为有限个 $\lambda$ -矩阵之积。
+\end{corollary}
+
+\begin{corollary}
+    设 $\bm{A}$ 是数域 $\mathbb{K}$ 上的 $n$ 阶矩阵，则 $\bm{A}$ 的特征矩阵 $\lambda \bm{I}_{n} - \bm{A}$ 必定相抵于
+    \[
+        \operatorname{diag}\{ 1, \ldots, 1, d_{1}(\lambda), \ldots, d_{m}(\lambda) \}
+    \]
+    其中 $d_{i}(\lambda) \mid d_{i + 1}(\lambda)(i = 1, 2, \cdots, m - 1)$。
+\end{corollary}
 
 
-
-
+\begin{definition}
+  对角 $\lambda$ -矩阵
+  \[
+        \operatorname{diag}\{ d_{1}(\lambda), d_{2}(\lambda), \ldots, d_{r}(\lambda); 0, \ldots, 0 \}
+  \]
+  称为 $\bm{A}(\lambda)$ 的法式或相抵标准型。
+\end{definition}
 
 
 %——————————————————————————————————%
