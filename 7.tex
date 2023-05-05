@@ -79,9 +79,9 @@
 \begin{theorem}
     设 $\bm{A}(\lambda)$ 是 $n$ 阶 $\lambda$ -矩阵，则 $\bm{A}(\lambda)$ 相抵于对角阵
     \[
-        \operatorname{diag}\{ d_{1}(\lambda), d_{2}(\lambda), \cdots, d_{r}(\lambda); 0, \cdots, 0 \}
+        \operatorname{diag}\{ d_{1}(\lambda), d_{2}(\lambda), \ldots, d_{r}(\lambda); 0, \ldots, 0 \}
     \]
-    其中 $d_{i}(\lambda)$ 是非零首一多项式且 $d_{i}(\lambda) \mid d_{i + 1}(\lambda)(i = 1, 2, \cdots, r - 1)$。
+    其中 $d_{i}(\lambda)$ 是非零首一多项式且 $d_{i}(\lambda) \mid d_{i + 1}(\lambda)(i = 1, 2, \ldots, r - 1)$。
 \end{theorem}
 
 \begin{corollary}
@@ -91,16 +91,16 @@
 \begin{corollary}
     设 $\bm{A}$ 是数域 $\mathbb{K}$ 上的 $n$ 阶矩阵，则 $\bm{A}$ 的特征矩阵 $\lambda \bm{I}_{n} - \bm{A}$ 必定相抵于
     \[
-        \operatorname{diag}\{ 1, \cdots, 1, d_{1}(\lambda), \cdots, d_{m}(\lambda) \}
+        \operatorname{diag}\{ 1, \ldots, 1, d_{1}(\lambda), \ldots, d_{m}(\lambda) \}
     \]
-    其中 $d_{i}(\lambda) \mid d_{i + 1}(\lambda)(i = 1, 2, \cdots, m - 1)$。
+    其中 $d_{i}(\lambda) \mid d_{i + 1}(\lambda)(i = 1, 2, \ldots, m - 1)$。
 \end{corollary}
 
 
 \begin{definition}
     对角 $\lambda$ -矩阵
     \[
-        \operatorname{diag}\{ d_{1}(\lambda), d_{2}(\lambda), \cdots, d_{r}(\lambda); 0, \cdots, 0 \}
+        \operatorname{diag}\{ d_{1}(\lambda), d_{2}(\lambda), \ldots, d_{r}(\lambda); 0, \ldots, 0 \}
     \]
     称为 $\bm{A}(\lambda)$ 的法式或相抵标准型。
 \end{definition}
@@ -115,60 +115,147 @@
 \end{definition}
 
 \begin{lemma}
-    设 $D_{1}(\lambda), D_{2}(\lambda), \cdots, D_{r}(\lambda)$ 是 $\bm{A}(\lambda)$ 的非零行列式因子，则
+    设 $D_{1}(\lambda), D_{2}(\lambda), \ldots, D_{r}(\lambda)$ 是 $\bm{A}(\lambda)$ 的非零行列式因子，则
     \[
-        D_{i}(\lambda) \mid D_{i + 1}(\lambda),\quad i = 1, 2, \cdots, r - 1
+        D_{i}(\lambda) \mid D_{i + 1}(\lambda),\quad i = 1, 2, \ldots, r - 1
     \]
 \end{lemma}
 
 \begin{definition}
-  设 $D_{1}(\lambda), D_{2}(\lambda), \cdots, D_{r}(\lambda)$ 是 $\bm{A}(\lambda)$ 的非零行列式因子，则 $g_{1}(\lambda) = D_{1}(\lambda), g_{2}(\lambda) = \dfrac{D_{2}(\lambda)}{D_{1}(\lambda)}, \cdots, g_{r}(\lambda) = \dfrac{D_{r}(\lambda)}{D_{r - 1}(\lambda)}$ 称为 $\bm{A}(\lambda)$ 的不变因子。
+    设 $D_{1}(\lambda), D_{2}(\lambda), \ldots, D_{r}(\lambda)$ 是 $\bm{A}(\lambda)$ 的非零行列式因子，则 $g_{1}(\lambda) = D_{1}(\lambda), g_{2}(\lambda) = \dfrac{D_{2}(\lambda)}{D_{1}(\lambda)}, \ldots, g_{r}(\lambda) = \dfrac{D_{r}(\lambda)}{D_{r - 1}(\lambda)}$ 称为 $\bm{A}(\lambda)$ 的不变因子。
 \end{definition}
 
 \begin{theorem}
-  相抵的 $\lambda$ -矩阵有相同的行列式因子，从而有相同的不变因子。
+    相抵的 $\lambda$ -矩阵有相同的行列式因子，从而有相同的不变因子。
 \end{theorem}
 
 \begin{corollary}
-  设 $n$ 阶 $\lambda$ -矩阵 $\bm{A}(\lambda)$ 的法式为
-  \[
-    \varLambda = \operatorname{diag}\{ d_{1}(\lambda), d_{2}(\lambda), \cdots, d_{r}(\lambda); 0, \cdots, 0 \}
+    设 $n$ 阶 $\lambda$ -矩阵 $\bm{A}(\lambda)$ 的法式为
+    \[
+        \varLambda = \operatorname{diag}\{ d_{1}(\lambda), d_{2}(\lambda), \ldots, d_{r}(\lambda); 0, \ldots, 0 \}
     \]
-    其中 $d_{i}(\lambda)$ 是非零首一多项式且 $d_{i}(\lambda) \mid d_{i + 1}(\lambda)(i = 1, 2, \cdots, r - 1)$，则 $\bm{A}(\lambda)$ 的不变因子为 $d_{1}(\lambda), d_{2}(\lambda), \cdots, d_{r}(\lambda)$。特别地，法式和不变因子之间相互唯一确定。
+    其中 $d_{i}(\lambda)$ 是非零首一多项式且 $d_{i}(\lambda) \mid d_{i + 1}(\lambda)(i = 1, 2, \ldots, r - 1)$，则 $\bm{A}(\lambda)$ 的不变因子为
+    \[
+        d_{1}(\lambda), d_{2}(\lambda), \ldots, d_{r}(\lambda)
+    \]
+    特别地，法式和不变因子之间相互唯一确定。
 \end{corollary}
 
 \begin{corollary}
-  设 $\bm{A}(\lambda), \bm{B}(\lambda)$ 为 $n$ 阶 $\lambda$ -矩阵，则 $\bm{A}(\lambda)$ 与 $\bm{B}(\lambda)$ 相抵当且仅当它们有相同的法式。
+    设 $\bm{A}(\lambda), \bm{B}(\lambda)$ 为 $n$ 阶 $\lambda$ -矩阵，则 $\bm{A}(\lambda)$ 与 $\bm{B}(\lambda)$ 相抵当且仅当它们有相同的法式。
 \end{corollary}
 
 \begin{corollary}
-   $n$ 阶 $\lambda$ -矩阵 $\bm{A}(\lambda)$ 的法式与初等变换的选取无关。
+    $n$ 阶 $\lambda$ -矩阵 $\bm{A}(\lambda)$ 的法式与初等变换的选取无关。
 \end{corollary}
 
 \begin{theorem}
-  数域 $\mathbb{K}$ 上 $n$ 阶矩阵 $\bm{A}$ 与 $\bm{B}$ 相似的充分必要条件是它们的特征矩阵 $\lambda \bm{I} - \bm{A}$ 与 $\lambda \bm{I} - \bm{B}$ 有相同的行列式因子或不变因子。
+    数域 $\mathbb{K}$ 上的 $n$ 阶矩阵 $\bm{A}$ 与 $\bm{B}$ 相似的充分必要条件是它们的特征矩阵 $\lambda \bm{I} - \bm{A}$ 与 $\lambda \bm{I} - \bm{B}$ 有相同的行列式因子或不变因子。
 \end{theorem}
 
 \begin{corollary}
-  设 $\mathbb{F} \subseteq \mathbb{K}$ 是两个数域，$\bm{A}, \bm{B}$ 是 $\mathbb{F}$ 上的两个矩阵，则 $\bm{A}$ 与 $\bm{B}$ 在 $\mathbb{F}$ 上相似的充分必要条件是它们在 $\mathbb{K}$ 上相似。
+    设 $\mathbb{F} \subseteq \mathbb{K}$ 是两个数域，$\bm{A}, \bm{B}$ 是 $\mathbb{F}$ 上的两个矩阵，则 $\bm{A}$ 与 $\bm{B}$ 在 $\mathbb{F}$ 上相似的充分必要条件是它们在 $\mathbb{K}$ 上相似。
 \end{corollary}
 
 
 %——————————————————————————————————%
 
-\section{}
+\section{有理标准型}
 
+\begin{lemma}\label{lemma-7.4.1}
+    设 $r$ 阶矩阵
+    \[
+        \bm{F} = \begin{pmatrix}
+            0      & 1          & 0          & \cdots & 0      \\
+            0      & 0          & 1          & \cdots & 0      \\
+            \vdots & \vdots     & \vdots     & \      & \vdots \\
+            0      & 0          & 0          & \cdots & 1      \\
+            -a_{r} & -a_{r - 1} & -a_{r - 2} & \cdots & -a_{1}
+        \end{pmatrix}
+    \]
+    则
+    \begin{enumerate}
+        \item $\bm{F}$ 的行列式因子为
+              \begin{equation}\tag{1}
+                  1, \ldots, 1, f(\lambda)
+              \end{equation}
+              其中共有 $r - 1$ 个 $1$，$f(\lambda) = \lambda^r + a_{1}\lambda^{r - 1} + \cdots + a_{r}$，$\bm{F}$ 的不变因子也由 $(1)$ 式给出。
+        \item $\bm{F}$ 的极小多项式等于 $f(\lambda)$。
+    \end{enumerate}
+\end{lemma}
 
+\begin{lemma}
+    设 $\lambda$ -矩阵 $\bm{A}(\lambda)$ 相抵于对角 $\lambda$ -矩阵
+    \[
+        \operatorname{diag}\{ d_{1}(\lambda), d_{2}(\lambda), \ldots, d_{n}(\lambda) \}
+    \]
+    $\lambda$ -矩阵 $\bm{B}(\lambda)$ 相抵于对角 $\lambda$ -矩阵
+    \[
+        \operatorname{diag}\{ d_{1}^{'}(\lambda), d_{2}^{'}(\lambda), \ldots, d_{n}^{'}(\lambda) \}
+    \]
+    且 $d_{1}^{'}(\lambda), d_{2}^{'}(\lambda), \ldots, d_{n}^{'}(\lambda)$ 是 $d_{1}(\lambda), d_{2}(\lambda), \ldots, d_{n}(\lambda)$ 的置换（即若不计次序，这两组多项式完全相同）。
+\end{lemma}
 
+\begin{theorem}
+    设 $\bm{A}$ 是数域 $\mathbb{K}$ 上的 $n$ 阶方阵，$\bm{A}$ 的不变因子组为
+    \[
+        1, \ldots, 1, d_{1}(\lambda), \ldots, d_{k}(\lambda)
+    \]
+    其中 $\deg d_{i}(\lambda) = m_{i} \geqslant 1$，则 $\bm{A}$ 相似于下列分块对角阵：
+    \begin{equation}
+        \bm{F} = \begin{pmatrix}
+            \bm{F}_{1} & \          & \                   \\
+            \          & \bm{F}_{2} & \      & \          \\
+            \          & \          & \ddots & \          \\
+            \          & \          & \      & \bm{F}_{k}
+        \end{pmatrix}\label{equation-7.4.4}
+    \end{equation}
+    其中 $\bm{F}_i$ 的阶等于 $m_i$，且 $\bm{F}_i$ 是形如 $\ref{lemma-7.4.1}$ 中的 $\bm{F}$ 矩阵， $\bm{F}_i$ 的最后一行由 $d_{i}(\lambda)$ 的系数（除首项系数之外）的负值组成。
+\end{theorem}
 
+\begin{definition}
+    我们将分块对角阵
+    \begin{equation*}
+        \bm{F} = \begin{pmatrix}
+            \bm{F}_{1} & \          & \                   \\
+            \          & \bm{F}_{2} & \      & \          \\
+            \          & \          & \ddots & \          \\
+            \          & \          & \      & \bm{F}_{k}
+        \end{pmatrix}
+    \end{equation*}
+    称为矩阵 $\bm{A}$ 的有理标准型或 Frobenius 标准型，每个 $\bm{F}_i$ 称为 Frobenius 块。
+\end{definition}
 
+\begin{theorem}
+    设数域 $\mathbb{K}$ 上的 $n$ 阶矩阵 $\bm{A}$ 的不变因子为
+    \[
+        1, \ldots, 1, d_{1}(\lambda), \ldots, d_{k}(\lambda)
+    \]
+    其中 $d_{i}(\lambda) \mid d_{i + 1}(\lambda)(i = 1, 2, \ldots, k - 1)$，则 $\bm{A}$ 的极小多项式 $m(\lambda) = d_{k}(\lambda)$。
+\end{theorem}
 
 %——————————————————————————————————%
 
-\section{}
+\section{初等因子}
 
+\begin{definition}
+    设 $d_{1}(\lambda), d_{2}(\lambda), \ldots, d_{k}(\lambda)$ 是数域 $\mathbb{K}$ 上矩阵 $\bm{A}$ 的非常数不变因子，在 $\mathbb{K}$ 上把 $d_{i}(\lambda)$ 分解成不可约因式之积：
+    \begin{gather}
+        d_{1}(\lambda) = p_{1}(\lambda)^{e_{11}}p_{2}(\lambda)^{e_{12}}\cdots p_{t}(\lambda)^{e_{1t}},\notag \\
+        d_{2}(\lambda) = p_{1}(\lambda)^{e_{21}}p_{2}(\lambda)^{e_{22}}\cdots p_{t}(\lambda)^{e_{2t}},\notag \\
+        \cdots \cdots                                                                                        \\
+        d_{k}(\lambda) = p_{1}(\lambda)^{e_{k1}}p_{1}(\lambda)^{e_{k1}}\cdots p_{t}(\lambda)^{e_{kt}},\notag
+    \end{gather}\label{equ:7.5.1}
+    其中 $e_{ij}$ 是非负整数（注意 $e_{ij}$ 可以为 $0$）。由于 $d_{i}(\lambda) \mid d_{i + 1}(\lambda)$，因此
+    \[
+        e_{1j} \leqslant e_{2j} \leqslant \cdots \leqslant e_{kj},\quad j = 1, 2, \cdots, t
+    \]
+    若 $\ref{equ:7.5.1}$ 式中的 $e_{ij} > 0$，则称 $p_{j}(\lambda)^{e_{ij}}$ 为 $\bm{A}$ 的初等因子，$\bm{A}$ 的全体初等因子称为 $\bm{A}$ 的初等因子组。
+\end{definition}
 
-
+\begin{theorem}
+  数域 $\mathbb{K}$ 上的两个矩阵 $\bm{A}$ 与 $\bm{B}$ 相似的充分必要条件是它们有相同的初等因子组，即矩阵的初等因子组是矩阵相似关系的全系不变量。
+\end{theorem}
 
 
 
