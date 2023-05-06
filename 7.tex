@@ -321,7 +321,7 @@
         \end{pmatrix}
     \end{equation}
     其中 $\bm{J}_i$ 为 $r_i$ 阶矩阵，且
-       \begin{equation}
+    \begin{equation}
         \bm{J}_i = \begin{pmatrix}
             \lambda_i & 1         & \      & \      & \         \\
             \         & \lambda_i & 1      & \      & \         \\
@@ -329,58 +329,105 @@
             \         & \         & \      & \ddots & 1         \\
             \         & \         & \      & \      & \lambda_i
         \end{pmatrix}
-       \end{equation} 
+    \end{equation}
 \end{theorem}
 
 \begin{definition}
-  我们将矩阵
-  \[
+    我们将矩阵
+    \[
         \bm{J} = \begin{pmatrix}
             \bm{J}_1 & \        & \      & \        \\
             \        & \bm{J}_2 & \      & \        \\
             \        & \        & \ddots & \        \\
             \        & \        & \      & \bm{J}_k
         \end{pmatrix}
-  \]
-  称为 $\bm{A}$ 的 Jordan 标准型，每个 $\bm{J}_i$ 称为 $\bm{A}$ 的 Jordan 块。
+    \]
+    称为 $\bm{A}$ 的 Jordan 标准型，每个 $\bm{J}_i$ 称为 $\bm{A}$ 的 Jordan 块。
 \end{definition}
 
 \begin{theorem}
-  设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，则必定存在 $V$ 的一组基，使得 $\varphi$ 在这组基下的表示矩阵为 Jordan 标准型。
+    设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，则必定存在 $V$ 的一组基，使得 $\varphi$ 在这组基下的表示矩阵为 Jordan 标准型。
 \end{theorem}
 
 \begin{corollary}
-  设 $\bm{A}$ 是 $n$ 阶复矩阵，则下列结论等价：
-  \begin{enumerate}
-    \item $\bm{A}$ 可对角化；
-    \item $\bm{A}$ 的极小多项式无重根；
-    \item $\bm{A}$ 的初等因子都是一次多项式。
-  \end{enumerate}
+    设 $\bm{A}$ 是 $n$ 阶复矩阵，则下列结论等价：
+    \begin{enumerate}
+        \item $\bm{A}$ 可对角化；
+        \item $\bm{A}$ 的极小多项式无重根；
+        \item $\bm{A}$ 的初等因子都是一次多项式。
+    \end{enumerate}
 \end{corollary}
 
 \begin{corollary}
-  设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，则 $\varphi$ 可对角化当且仅当 $\varphi$ 的极小多项式无重根，当且仅当 $\varphi$ 的初等因子都是一次多项式。
+    设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，则 $\varphi$ 可对角化当且仅当 $\varphi$ 的极小多项式无重根，当且仅当 $\varphi$ 的初等因子都是一次多项式。
 \end{corollary}
 
 \begin{corollary}
-  设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，$V_0$ 是 $\varphi$ 的不变子空间。若 $\varphi$ 可对角化，则 $\varphi$ 在 $V_0$ 上的限制也可对角化。
+    设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，$V_0$ 是 $\varphi$ 的不变子空间。若 $\varphi$ 可对角化，则 $\varphi$ 在 $V_0$ 上的限制也可对角化。
 \end{corollary}
 
 \begin{corollary}
-  设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，且 $V = V_1 \oplus V_2 \oplus \cdots \oplus V_k$，其中每个 $V_i$ 都是 $\varphi$ 的不变子空间，则 $\varphi$ 可对角化的充分必要条件是 $\varphi$ 在每个 $V_i$ 上的限制都可对角化。
+    设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，且 $V = V_1 \oplus V_2 \oplus \cdots \oplus V_k$，其中每个 $V_i$ 都是 $\varphi$ 的不变子空间，则 $\varphi$ 可对角化的充分必要条件是 $\varphi$ 在每个 $V_i$ 上的限制都可对角化。
 \end{corollary}
 
 \begin{corollary}
-  设 $\bm{A}$ 是数域 $\mathbb{K}$ 上的矩阵，如果 $\bm{A}$ 的特征值全在 $\mathbb{K}$ 中，则 $\bm{A}$ 在 $\mathbb{K}$ 上相似于其 Jordan 标准型。
+    设 $\bm{A}$ 是数域 $\mathbb{K}$ 上的矩阵，如果 $\bm{A}$ 的特征值全在 $\mathbb{K}$ 中，则 $\bm{A}$ 在 $\mathbb{K}$ 上相似于其 Jordan 标准型。
 \end{corollary}
 
 %——————————————————————————————————%
 
-\section{}
+\section{Jordan 标准型的应用}
 
+\begin{theorem}
+    线性变换 $\varphi$ 的特征值 $\lambda_1$ 的度数等于 $\varphi$ 的 Jordan 标准型中属于特征值 $\lambda_1$ 的 Jordan 块的个数，$\lambda_1$ 的重数等于所有属于特征值 $\lambda_1$ 的 Jordan 块的阶数之和。
+\end{theorem}
 
+\begin{definition}
+    设 $V_0$ 是线性空间 $V$ 的 $r$ 维子空间，$\psi$ 是 $V$ 上的线性变换。若存在 $\bm{\alpha} \in V_0$，使 $\{\bm{\alpha}, \psi(\alpha), \ldots, \psi^{r - 1}(\alpha)\}$ 构成 $V_0$ 的一组基，则称 $V_0$ 为关于线性变换 $\psi$ 的循环子空间。
+\end{definition}
 
+\begin{definition}
+    设 $\lambda_0$ 是 $n$ 维复线性空间 $V$ 上的线性变换 $\varphi$ 的特征值，则
+    \[
+        R(\lambda_0) = \{\bm{v} \in V : (\varphi - \lambda_0 \bm{I})^{n}(\bm{v}) = \bm{0}\}
+    \]
+    构成了 $V$ 的子空间，称为属于特征值 $\lambda_0$ 的根子空间。
+\end{definition}
 
+\begin{theorem}
+    设 $\varphi$ 是 $n$ 维复线性空间 $V$ 上的线性变换
+    \begin{enumerate}
+        \item 若 $\varphi$ 的初等因子组为
+              \[
+                  (\lambda - \lambda_1)^{r_1}, (\lambda - \lambda_2)^{r_2}, \ldots, (\lambda - \lambda_k)^{r_k}
+              \]
+              则 $V$ 可分解为 $k$ 个不变子空间的直和：
+              \begin{equation}
+                  V = V_1 \oplus V_2 \oplus \cdots \oplus V_k
+              \end{equation}
+              其中 $V_i$ 是维数等于 $r_i$ 的关于 $\varphi - \lambda_{i}\bm{I}$ 的循环子空间。
+        \item 若 $\lambda_1, \lambda_2, \ldots, \lambda_s$ 是 $\varphi$ 的全体不同特征值，则 $V$ 可分解为 $s$ 个不变子空间的直和：
+              \begin{equation}
+                  V = R(\lambda_1) \oplus R(\lambda_2) \oplus \cdots \oplus R(\lambda_s)
+              \end{equation}
+              其中 $R(\lambda_i)$ 是 $\lambda_i$ 的根子空间，$R(\lambda_i)$ 的维数等于 $\lambda_i$ 的重数，且每个 $R(\lambda_i)$ 又可分解为 $(4.6)$ 式中若干个 $V_j$ 的直和。
+    \end{enumerate}
+\end{theorem}
+
+\begin{lemma}
+    设 $\bm{A}, \bm{B}$ 是两个 $n$ 阶可对角化复矩阵且 $\bm{AB} = \bm{BA}$，则它们可同时对角化，即存在可逆阵 $\bm{P}$，使 $\bm{P}^{-1}\bm{AP}$ 和 $\bm{P}^{-1}\bm{BP}$ 都是对角阵。
+\end{lemma}
+
+\begin{theorem}{Jordan-Chevalley 分解}
+    设 $\bm{A}$ 是 $n$ 阶复矩阵，则 $\bm{A}$ 可分解为 $\bm{A} = \bm{B} + \bm{C}$，其中 $\bm{B}, \bm{C}$ 适合下面的条件：
+    \begin{enumerate}
+        \item $\bm{B}$ 是可对角化矩阵；
+        \item $\bm{C}$ 是幂零阵；
+        \item $\bm{BC} = \bm{CB}$；
+        \item $\bm{B}, \bm{C}$ 均可表示为 $\bm{A}$ 的多项式。
+    \end{enumerate}
+    且满足前三个条件的分解是唯一的。
+\end{theorem}
 
 
 %——————————————————————————————————%
