@@ -162,7 +162,7 @@
 
 \section{有理标准型}
 
-\begin{lemma}\label{lemma-7.4.1}
+\begin{lemma}\label{lem:7.4.1}
     设 $r$ 阶矩阵
     \[
         \bm{F} = \begin{pmatrix}
@@ -208,9 +208,9 @@
             \          & \bm{F}_{2} & \      & \          \\
             \          & \          & \ddots & \          \\
             \          & \          & \      & \bm{F}_{k}
-        \end{pmatrix}\label{equation-7.4.4}
+        \end{pmatrix}\label{equ:7.4.4}
     \end{equation}
-    其中 $\bm{F}_i$ 的阶等于 $m_i$，且 $\bm{F}_i$ 是形如 $\ref{lemma-7.4.1}$ 中的 $\bm{F}$ 矩阵， $\bm{F}_i$ 的最后一行由 $d_{i}(\lambda)$ 的系数（除首项系数之外）的负值组成。
+    其中 $\bm{F}_i$ 的阶等于 $m_i$，且 $\bm{F}_i$ 是形如 $\ref{lem:7.4.1}$ 中的 $\bm{F}$ 矩阵， $\bm{F}_i$ 的最后一行由 $d_{i}(\lambda)$ 的系数（除首项系数之外）的负值组成。
 \end{theorem}
 
 \begin{definition}
@@ -254,19 +254,125 @@
 \end{definition}
 
 \begin{theorem}
-  数域 $\mathbb{K}$ 上的两个矩阵 $\bm{A}$ 与 $\bm{B}$ 相似的充分必要条件是它们有相同的初等因子组，即矩阵的初等因子组是矩阵相似关系的全系不变量。
+    数域 $\mathbb{K}$ 上的两个矩阵 $\bm{A}$ 与 $\bm{B}$ 相似的充分必要条件是它们有相同的初等因子组，即矩阵的初等因子组是矩阵相似关系的全系不变量。
 \end{theorem}
 
 
 
 %——————————————————————————————————%
 
-\section{}
+\section{Jordan 标准型}
 
+\begin{lemma}
+    $r$ 阶矩阵
+    \begin{equation}
+        \bm{J} = \begin{pmatrix}
+            \lambda_0 & 1         & \      & \      & \         \\
+            \         & \lambda_0 & 1      & \      & \         \\
+            \         & \         & \ddots & \ddots & \         \\
+            \         & \         & \      & \ddots & 1         \\
+            \         & \         & \      & \      & \lambda_0
+        \end{pmatrix}\label{equ:7.6.1}
+    \end{equation}
+    的初等因子组为 $(\lambda - \lambda_0)^r$。
+\end{lemma}
 
+\begin{lemma}
+    设特征矩阵 $\lambda \bm{I} - \bm{A}$ 经过初等变换化为下列对角阵：
+    \begin{equation*}
+        \begin{pmatrix}
+            f_{1}(\lambda) & \              & \      & \              \\
+            \              & f_{2}(\lambda) & \      & \              \\
+            \              & \              & \ddots & \              \\
+            \              & \              & \      & f_{n}(\lambda)
+        \end{pmatrix}
+    \end{equation*}
+    其中 $f_{i}(\lambda)(i = 1, 2, \cdots, n)$ 为非零首一多项式。将 $f_{i}(\lambda)$ 作不可约分解，若 $(\lambda - \lambda_0)^k$ 能整除 $f_{i}(\lambda)$，但 $(\lambda - \lambda_0)^{k + 1}$ 不能整除 $f_{i}(\lambda)$，就称 $(\lambda - \lambda_0)^k$ 是 $f_{i}(\lambda)$ 的准素因子，则矩阵 $\bm{A}$ 的初等因子组等于所有 $f_{i}(\lambda)$ 的准素因子组。
+\end{lemma}
 
+\begin{lemma}
+    设 $\bm{J}$ 是分块对角阵
+    \[
+        \begin{pmatrix}
+            \bm{J}_1 & \        & \      & \        \\
+            \        & \bm{J}_2 & \      & \        \\
+            \        & \        & \ddots & \        \\
+            \        & \        & \      & \bm{J}_k
+        \end{pmatrix}
+    \]
+    其中每个 $\bm{J}_i$ 都是形如 $\ref{equ:7.6.1}$ 的矩阵，$\bm{J}_i$ 的初等因子组为 $(\lambda - \lambda_i)^{r_i}$，则 $\bm{J}$ 的初等因子为
+    \[
+        (\lambda - \lambda_1)^{r_1}, (\lambda - \lambda_2)^{r_2}, \ldots, (\lambda - \lambda_k)^{r_k}
+    \]
+\end{lemma}
 
+\begin{theorem}
+    设 $\bm{A}$ 是复数域上的矩阵且 $\bm{A}$ 的初等因子为
+    \[
+        (\lambda - \lambda_1)^{r_1}, (\lambda - \lambda_2)^{r_2}, \ldots, (\lambda - \lambda_k)^{r_k}
+    \]
+    则 $\bm{A}$ 相似于下列分块对角阵
+    \begin{equation}
+        \bm{J} = \begin{pmatrix}
+            \bm{J}_1 & \        & \      & \        \\
+            \        & \bm{J}_2 & \      & \        \\
+            \        & \        & \ddots & \        \\
+            \        & \        & \      & \bm{J}_k
+        \end{pmatrix}
+    \end{equation}
+    其中 $\bm{J}_i$ 为 $r_i$ 阶矩阵，且
+       \begin{equation}
+        \bm{J}_i = \begin{pmatrix}
+            \lambda_i & 1         & \      & \      & \         \\
+            \         & \lambda_i & 1      & \      & \         \\
+            \         & \         & \ddots & \ddots & \         \\
+            \         & \         & \      & \ddots & 1         \\
+            \         & \         & \      & \      & \lambda_i
+        \end{pmatrix}
+       \end{equation} 
+\end{theorem}
 
+\begin{definition}
+  我们将矩阵
+  \[
+        \bm{J} = \begin{pmatrix}
+            \bm{J}_1 & \        & \      & \        \\
+            \        & \bm{J}_2 & \      & \        \\
+            \        & \        & \ddots & \        \\
+            \        & \        & \      & \bm{J}_k
+        \end{pmatrix}
+  \]
+  称为 $\bm{A}$ 的 Jordan 标准型，每个 $\bm{J}_i$ 称为 $\bm{A}$ 的 Jordan 块。
+\end{definition}
+
+\begin{theorem}
+  设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，则必定存在 $V$ 的一组基，使得 $\varphi$ 在这组基下的表示矩阵为 Jordan 标准型。
+\end{theorem}
+
+\begin{corollary}
+  设 $\bm{A}$ 是 $n$ 阶复矩阵，则下列结论等价：
+  \begin{enumerate}
+    \item $\bm{A}$ 可对角化；
+    \item $\bm{A}$ 的极小多项式无重根；
+    \item $\bm{A}$ 的初等因子都是一次多项式。
+  \end{enumerate}
+\end{corollary}
+
+\begin{corollary}
+  设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，则 $\varphi$ 可对角化当且仅当 $\varphi$ 的极小多项式无重根，当且仅当 $\varphi$ 的初等因子都是一次多项式。
+\end{corollary}
+
+\begin{corollary}
+  设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，$V_0$ 是 $\varphi$ 的不变子空间。若 $\varphi$ 可对角化，则 $\varphi$ 在 $V_0$ 上的限制也可对角化。
+\end{corollary}
+
+\begin{corollary}
+  设 $\varphi$ 是复数域上线性空间 $V$ 上的线性变换，且 $V = V_1 \oplus V_2 \oplus \cdots \oplus V_k$，其中每个 $V_i$ 都是 $\varphi$ 的不变子空间，则 $\varphi$ 可对角化的充分必要条件是 $\varphi$ 在每个 $V_i$ 上的限制都可对角化。
+\end{corollary}
+
+\begin{corollary}
+  设 $\bm{A}$ 是数域 $\mathbb{K}$ 上的矩阵，如果 $\bm{A}$ 的特征值全在 $\mathbb{K}$ 中，则 $\bm{A}$ 在 $\mathbb{K}$ 上相似于其 Jordan 标准型。
+\end{corollary}
 
 %——————————————————————————————————%
 
@@ -287,38 +393,3 @@
 
 
 %——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
