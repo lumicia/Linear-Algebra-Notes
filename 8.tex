@@ -71,38 +71,94 @@
 \section{惯性定理}
 
 \begin{definition}
-  设 $f(x_1, x_2, \ldots, x_n)$ 是一个 $n$ 元实二次型，且 $f$ 可化为两个标准型：
-  \begin{align*}
-    c_{1}y_{1}^{2} + \cdots + c_{p}y_{p}^{2} - c_{p + 1}y_{p + 1}^{2} - \cdots - c_{r}y_{r}^{2} \\
-    d_{1}z_{1}^{2} + \cdots + d_{k}z_{k}^{2} - d_{k + 1}z_{k + 1}^{2} - \cdots - d_{r}z_{r}^{2} 
-  \end{align*}
-  其中 $c_{i} > 0, d_{i} > 0$，则必定有 $p = k$。
+    设 $f(x_1, x_2, \ldots, x_n)$ 是 $n$ 元实二次型，且 $f$ 可化为两个标准型：
+    \begin{align*}
+        c_{1}y_{1}^{2} + \cdots + c_{p}y_{p}^{2} - c_{p + 1}y_{p + 1}^{2} - \cdots - c_{r}y_{r}^{2} \\
+        d_{1}z_{1}^{2} + \cdots + d_{k}z_{k}^{2} - d_{k + 1}z_{k + 1}^{2} - \cdots - d_{r}z_{r}^{2}
+    \end{align*}
+    其中 $c_{i} > 0, d_{i} > 0$，则必定有 $p = k$。
 \end{definition}
 
 \begin{definition}
-  设 $f(x_1, x_2, \ldots, x_n)$ 是一个实二次型，且 $f$ 可化为规范标准型
-  \[
-      f = y_{1}^{2} + \cdots + y_{p}^{2} - y_{p + 1}^{2} - \cdots - y_{r}^{2}
-  \]
-  的形状，则称 $r$ 是该二次型的秩，$p$ 是它的正惯性指数，$q = r - p$ 是它的负惯性指数，$s = p - q$ 称为 $f$ 的符号差。
+    设 $f(x_1, x_2, \ldots, x_n)$ 是一个实二次型，且 $f$ 可化为规范标准型
+    \[
+        f = y_{1}^{2} + \cdots + y_{p}^{2} - y_{p + 1}^{2} - \cdots - y_{r}^{2}
+    \]
+    的形状，则称 $r$ 是该二次型的秩，$p$ 是它的正惯性指数，$q = r - p$ 是它的负惯性指数，$s = p - q$ 称为 $f$ 的符号差。
 \end{definition}
 
 \begin{theorem}
-  秩与符号差（或正负惯性指数）是实对称阵在合同关系下的全系不变量。
+    秩与符号差（或正负惯性指数）是实对称阵在合同关系下的全系不变量。
 \end{theorem}
 
 \begin{theorem}
-  秩是复对称阵唯一的全系不变量。
+    秩是复对称阵唯一的全系不变量。
 \end{theorem}
 
 %——————————————————————————————————%
 
-\section{}
+\section{正定阵与正定矩阵}
 
+\begin{definition}
+    设 $f(x_1, x_2, \ldots, x_n) = \bm{x}^{\mathrm{T}}\bm{Ax}$ 是 $n$ 元实二次型，$\bm{A}$ 是相伴矩阵。
+    \begin{enumerate}
+        \item 若对任意 $n$ 维非零列向量 $\bm{\alpha}$ 均有 $\bm{\alpha}^{\mathrm{T}}\bm{A\alpha} > 0$，则称 $f$ 是正定二次型（简称正定型），矩阵 $\bm{A}$ 称为正定矩阵（简称正定阵）；
+        \item 若对任意 $n$ 维非零列向量 $\bm{\alpha}$ 均有 $\bm{\alpha}^{\mathrm{T}}\bm{A\alpha} < 0$，则称 $f$ 是负定二次型（简称负定型），矩阵 $\bm{A}$ 称为负定矩阵（简称负定阵）；
+        \item 若对任意 $n$ 维非零列向量 $\bm{\alpha}$ 均有 $\bm{\alpha}^{\mathrm{T}}\bm{A\alpha} \geqslant 0$，则称 $f$ 是半正定二次型（简称半正定型），矩阵 $\bm{A}$ 称为半正定矩阵（简称半正定阵）；
+        \item 若对任意 $n$ 维非零列向量 $\bm{\alpha}$ 均有 $\bm{\alpha}^{\mathrm{T}}\bm{A\alpha} \leqslant 0$，则称 $f$ 是半负定二次型（简称半负定型），矩阵 $\bm{A}$ 称为半负定矩阵（简称半负定阵）；
+        \item 若存在 $\bm{\alpha}, \bm{\beta}$，使 $\bm{\alpha}^{\mathrm{T}}\bm{A\alpha} > 0, \bm{\beta}^{\mathrm{T}}\bm{A\beta} < 0$，则称 $f$ 为不定型。
+    \end{enumerate}
+\end{definition}
 
+\begin{theorem}
+    设 $f(x_1, x_2, \ldots, x_n)$ 是 $n$ 元实二次型，则
+    \begin{enumerate}
+        \item $f$ 是正定型的充分必要条件是 $f$ 的正惯性指数等于 $n$；
+        \item $f$ 是负定型的充分必要条件是 $f$ 的负惯性指数等于 $n$；
+        \item $f$ 是半正定型的充分必要条件是 $f$ 的正惯性指数等于 $f$ 的秩 $r$；
+        \item $f$ 是半负定型的充分必要条件是 $f$ 的负惯性指数等于 $f$ 的秩 $r$；
+    \end{enumerate}
+\end{theorem}
 
+\begin{theorem}
+    设 $n$ 阶实对称阵 $\bm{A}$，则
+    \begin{enumerate}
+        \item $\bm{A}$ 是正定阵当且仅当它合同于单位阵 $\bm{I}_n$；
+        \item $\bm{A}$ 是负定阵当且仅当它合同于单位阵 $-\bm{I}_n$；
+        \item $\bm{A}$ 是半正定阵当且仅当 $\bm{A}$ 合同于下列对角阵
+              \[
+                  \begin{pmatrix}
+                      \bm{I}_{r} & \bm{O} \\
+                      \bm{O}     & \bm{O}
+                  \end{pmatrix}
+              \]
+        \item $\bm{A}$ 是半负定阵当且仅当 $\bm{A}$ 合同于下列对角阵
+              \[
+                  \begin{pmatrix}
+                      -\bm{I}_{r} & \bm{O} \\
+                      \bm{O}     & \bm{O}
+                  \end{pmatrix}
+              \]
+    \end{enumerate}
+\end{theorem}
 
+\begin{definition}
+  设 $\bm{A} = (a_{ij})$ 是 $n$ 阶矩阵，$\bm{A}$ 的 $n$ 个子式
+  \[
+      \begin{vmatrix} 
+          a_{11}& a_{12}& \cdots & a_{1k}\\ 
+          a_{21}& a_{22}& \cdots & a_{2k}\\ 
+          \vdots& \vdots& \ & \vdots \\
+          a_{k1}& a_{k2}& \cdots & a_{kk} 
+      \end{vmatrix} 
+      (k = 1, 2, \ldots, n)
+  \]
+  称为 $\bm{A}$ 的顺序主子式。
+\end{definition}
 
+\begin{theorem}
+    $n$ 阶实对称阵 $\bm{A}$ 是正定阵的充分必要条件是它的 $n$ 个顺序主子式全大于零。
+\end{theorem}
 
 %——————————————————————————————————%
 
