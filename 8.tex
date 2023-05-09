@@ -16,9 +16,9 @@
 \begin{definition}{矩阵合同}
     设 $\bm{A}, \bm{B}$ 是数域 $\mathbb{K}$ 上的 $n$ 阶矩阵，若存在 $n$ 阶可逆阵 $\bm{C}$，使得
     \[
-        \bm{B} = \bm{C}'\bm{AC}
+        \bm{B} = \bm{C}^{\mathrm{T}}\bm{AC}
     \]
-    则称 $\bm{B}$ 与 $\bm{A}$ 是合同的，或称 $\bm{B}$ 与 $\bm{A}$ 有合同关系。
+    则称 $\bm{B}$ 与 $\bm{A}$ 是合同的（congruent），或称 $\bm{B}$ 与 $\bm{A}$ 有合同关系（congruence）。
 \end{definition}
 
 \begin{remark}
@@ -35,11 +35,11 @@
 \end{lemma}
 
 \begin{lemma}
-    设 $\bm{A}$ 是数域 $\mathbb{K}$ 上的非零对称阵，则必定存在可逆阵 $\bm{C}$，使 $\bm{C}'\bm{AC}$ 的第 $(1, 1)$ 元素不等于零。
+    设 $\bm{A}$ 是数域 $\mathbb{K}$ 上的非零对称阵，则必定存在可逆阵 $\bm{C}$，使 $\bm{C}^{\mathrm{T}}\bm{AC}$ 的第 $(1, 1)$ 元素不等于零。
 \end{lemma}
 
 \begin{theorem}
-    设 $\bm{A}$ 是数域 $\mathbb{K}$ 上的 $n$ 阶对称阵，则必定存在 $\mathbb{K}$ 上的可逆阵 $\bm{C}$，使 $\bm{C}'\bm{AC}$ 为对角阵。
+    设 $\bm{A}$ 是数域 $\mathbb{K}$ 上的 $n$ 阶对称阵，则必定存在 $\mathbb{K}$ 上的可逆阵 $\bm{C}$，使 $\bm{C}^{\mathrm{T}}\bm{AC}$ 为对角阵。
 \end{theorem}
 
 
@@ -68,12 +68,32 @@
 
 %——————————————————————————————————%
 
-\section{}
+\section{惯性定理}
 
+\begin{definition}
+  设 $f(x_1, x_2, \ldots, x_n)$ 是一个 $n$ 元实二次型，且 $f$ 可化为两个标准型：
+  \begin{align*}
+    c_{1}y_{1}^{2} + \cdots + c_{p}y_{p}^{2} - c_{p + 1}y_{p + 1}^{2} - \cdots - c_{r}y_{r}^{2} \\
+    d_{1}z_{1}^{2} + \cdots + d_{k}z_{k}^{2} - d_{k + 1}z_{k + 1}^{2} - \cdots - d_{r}z_{r}^{2} 
+  \end{align*}
+  其中 $c_{i} > 0, d_{i} > 0$，则必定有 $p = k$。
+\end{definition}
 
+\begin{definition}
+  设 $f(x_1, x_2, \ldots, x_n)$ 是一个实二次型，且 $f$ 可化为规范标准型
+  \[
+      f = y_{1}^{2} + \cdots + y_{p}^{2} - y_{p + 1}^{2} - \cdots - y_{r}^{2}
+  \]
+  的形状，则称 $r$ 是该二次型的秩，$p$ 是它的正惯性指数，$q = r - p$ 是它的负惯性指数，$s = p - q$ 称为 $f$ 的符号差。
+\end{definition}
 
+\begin{theorem}
+  秩与符号差（或正负惯性指数）是实对称阵在合同关系下的全系不变量。
+\end{theorem}
 
-
+\begin{theorem}
+  秩是复对称阵唯一的全系不变量。
+\end{theorem}
 
 %——————————————————————————————————%
 
