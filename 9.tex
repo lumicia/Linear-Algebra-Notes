@@ -1,0 +1,265 @@
+\chapter{内积空间}
+
+%——————————————————————————————————%
+
+\section{内积空间}
+
+\begin{definition}
+    设 $V$ 是实数域上的线性空间，若对 $V$ 中任意一组有序向量 $\{\bm{\alpha}, \bm{\beta}\}$，都唯一地对应一个实数，记为 $\langle \bm{\alpha}, \bm{\beta} \rangle$，满足下列条件：
+    \begin{enumerate}
+        \item $\langle \bm{\beta}, \bm{\alpha} \rangle = \langle \bm{\alpha}, \bm{\beta} \rangle$；
+        \item $\langle \bm{\alpha} + \bm{\beta}, \bm{\gamma} \rangle = \langle \bm{\alpha}, \bm{\gamma} \rangle + \langle \bm{\beta}, \bm{\gamma} \rangle$；
+        \item $\langle c\bm{\alpha}, \bm{\beta} \rangle = c\langle \bm{\alpha}, \bm{\beta} \rangle$，其中 $c$ 为任一实数；
+        \item $\langle \bm{\alpha}, \bm{\alpha} \rangle \geqslant 0$ 且等号成立当且仅当 $\bm{\alpha} = \bm{0}$。
+    \end{enumerate}
+    则称在 $V$ 上定义了一个内积，实数 $\langle \bm{\alpha}, \bm{\beta} \rangle$ 称为 $\bm{\alpha}$ 与 $\bm{\beta}$ 的内积。线性空间 $V$ 称为实内积空间。有限维实内积空间称为 Euclid 空间，简称欧氏空间。
+\end{definition}
+
+\begin{definition}
+    设 $V$ 是复数域上的线性空间，若对 $V$ 中任意一组有序向量 $\{\bm{\alpha}, \bm{\beta}\}$，都唯一地对应一个复数，记为 $\langle \bm{\alpha}, \bm{\beta} \rangle$，满足下列条件：
+    \begin{enumerate}
+        \item $\langle \bm{\beta}, \bm{\alpha} \rangle = \overline{\langle \bm{\alpha}, \bm{\beta} \rangle}$；
+        \item $\langle \bm{\alpha} + \bm{\beta}, \bm{\gamma} \rangle = \langle \bm{\alpha}, \bm{\gamma} \rangle + \langle \bm{\beta}, \bm{\gamma} \rangle$；
+        \item $\langle c\bm{\alpha}, \bm{\beta} \rangle = c\langle \bm{\alpha}, \bm{\beta} \rangle$，其中 $c$ 为任一复数；
+        \item $\langle \bm{\alpha}, \bm{\alpha} \rangle \geqslant 0$ 且等号成立当且仅当 $\bm{\alpha} = \bm{0}$。
+    \end{enumerate}
+    则称在 $V$ 上定义了一个内积，复数 $\langle \bm{\alpha}, \bm{\beta} \rangle$ 称为 $\bm{\alpha}$ 与 $\bm{\beta}$ 的内积。线性空间 $V$ 称为复内积空间。有限维复内积空间称为酉空间。
+\end{definition}
+
+\begin{remark}
+    由 $(1)$ 和 $(3)$，有 $\langle \bm{\alpha}, c\bm{\beta} \rangle = \overline{c}\langle \bm{\alpha}, \bm{\beta} \rangle$。
+\end{remark}
+
+\begin{definition}
+    设 $\mathbb{R}_n$ 是 $n$ 维实列向量空间，$\bm{\alpha} = (x_1, x_2, \ldots, x_n)^{\mathrm{T}}, \bm{\beta} = (y_1, y_2, \ldots, y_n)^{\mathrm{T}}$，定义
+    \[
+        \langle \bm{\alpha}, \bm{\beta} \rangle = x_{1}y_{1} + x_{2}y_{2} + \cdots + x_{n}y_{n}
+    \]
+    则 $\mathbb{R}_n$ 成为一个欧式空间，上述内积称为 $\mathbb{R}_n$ 的标准内积。
+\end{definition}
+
+\begin{definition}
+    设 $\mathbb{C}_n$ 是 $n$ 维复列向量空间，$\bm{\alpha} = (x_1, x_2, \ldots, x_n)^{\mathrm{T}}, \bm{\beta} = (y_1, y_2, \ldots, y_n)^{\mathrm{T}}$，定义
+    \[
+        \langle \bm{\alpha}, \bm{\beta} \rangle = x_{1}\overline{y}_{1} + x_{2}\overline{y}_{2} + \cdots + x_{n}\overline{y}_{n}
+    \]
+    则 $\mathbb{C}_n$ 成为一个酉空间，上述内积称为 $\mathbb{C}_n$ 的标准内积。
+\end{definition}
+
+\begin{proposition}
+    设 $V$ 是 $n$ 维实列向量空间，$\bm{G}$ 是 $n$ 阶正定实对称阵，对 $\bm{\alpha}, \bm{\beta} \in V$，定义
+    \[
+        \langle \bm{\alpha}, \bm{\beta} \rangle = \bm{\alpha}^{\mathrm{T}}\bm{G\beta}
+    \]
+    则 $V$ 成为一个欧式空间。当 $\bm{G} = \bm{I}_n$，即 $\bm{G}$ 为单位阵时，$V$ 上的内积就是标准内积。
+
+    实列向量空间的标准内积用矩阵乘法可表示为
+    \[
+        \langle \bm{\alpha}, \bm{\beta} \rangle = \bm{\alpha}^{\mathrm{T}}\bm{\beta}
+    \]
+
+    实行向量空间的标准内积用矩阵乘法可表示为
+    \[
+        \langle \bm{\alpha}, \bm{\beta} \rangle = \bm{\alpha}\bm{\beta}^{\mathrm{T}}
+    \]
+\end{proposition}
+
+\begin{proposition}
+    设 $U$ 是 $n$ 维复列向量空间，$\bm{H}$ 是 $n$ 阶正定 Hermite 阵，对 $\bm{\alpha}, \bm{\beta} \in U$，定义
+    \[
+        \langle \bm{\alpha}, \bm{\beta} \rangle = \bm{\alpha}^{\mathrm{T}}\bm{H}\overline{\bm{\beta}}
+    \]
+    则 $U$ 成为一个欧式空间。当 $\bm{H} = \bm{I}_n$，即 $\bm{H}$ 为单位阵时，$U$ 上的内积就是标准内积。
+
+    复列向量空间的标准内积用矩阵乘法可表示为
+    \[
+        \langle \bm{\alpha}, \bm{\beta} \rangle = \bm{\alpha}^{\mathrm{T}}\overline{\bm{\beta}}
+    \]
+
+    复行向量空间的标准内积用矩阵乘法可表示为
+    \[
+        \langle \bm{\alpha}, \bm{\beta} \rangle = \bm{\alpha}\overline{\bm{\beta}}^{\mathrm{T}}
+    \]
+\end{proposition}
+
+\begin{definition}
+    设 $V$ 是内积空间，$\bm{\alpha}$ 是 $V$ 中的向量，定义 $\bm{\alpha}$ 的范数为
+    \[
+        \Vert \bm{\alpha} \Vert = \sqrt{\langle \bm{\alpha}, \bm{\alpha} \rangle}
+    \]
+    即实数 $\langle \bm{\alpha}, \bm{\alpha} \rangle$ 的算术平方根。
+\end{definition}
+
+\begin{remark}
+    根据范数的定义，$\Vert \bm{\alpha} \Vert = 0$ 当且仅当 $\bm{\alpha} = \bm{0}$。
+\end{remark}
+
+\begin{remark}
+    当 $V = \mathbb{R}^n$ 且内积为标准内积时，若 $\bm{\alpha} = (x_1, x_2, \ldots, x_n)$，则
+    \[
+        \Vert \bm{\alpha} \Vert = \sqrt{x_{1}^{2} + x_{2}^{2} + \cdots + x_{n}^{2}}
+    \]
+\end{remark}
+
+\begin{remark}
+    设 $\bm{\alpha}, \bm{\beta} \in V$，则 $\bm{\alpha}$ 与 $\bm{\beta}$ 的距离定义为
+    \[
+        d(\bm{\alpha}, \bm{\beta}) = \Vert \bm{\alpha} - \bm{\beta} \Vert
+    \]
+    显然 $d(\bm{\alpha}, \bm{\beta}) = d(\bm{\beta}, \bm{\alpha})$。
+\end{remark}
+
+\begin{theorem}
+    设 $V$ 是内积空间，$\bm{\alpha}, \bm{\beta} \in V$，$c$ 是任一常数，则
+    \begin{enumerate}
+        \item $\Vert c \bm{\alpha} \Vert = \vert c \vert \cdot \Vert \bm{\alpha} \Vert $；
+        \item $\vert \langle \bm{\alpha}, \bm{\beta} \rangle \vert \leqslant \Vert \bm{\alpha} \Vert \cdot \Vert \bm{\beta} \Vert $；
+        \item $\Vert \bm{\alpha} + \bm{\beta} \Vert \leqslant \Vert \bm{\alpha} \Vert + \Vert \bm{\beta} \Vert $。
+    \end{enumerate}
+\end{theorem}
+
+\begin{remark}
+    我们将 $(2)$ 称为 Cauchy-Schuwarz 不等式，$(3)$ 称为三角不等式。
+\end{remark}
+
+\begin{definition}
+    当 $V$ 是实内积空间时，定义非零向量 $\bm{\alpha}, \bm{\beta}$ 的夹角 $\theta$ 的余弦为
+    \[
+        \cos \theta = \frac{\langle \bm{\alpha}, \bm{\beta} \rangle}{\Vert \bm{\alpha} \Vert \cdot \Vert \bm{\beta} \Vert}
+    \]
+    当 $V$ 是复内积空间时，定义非零向量 $\bm{\alpha}, \bm{\beta}$ 的夹角 $\theta$ 的余弦为
+    \[
+        \cos \theta = \frac{\vert \langle \bm{\alpha}, \bm{\beta} \rangle \vert}{\Vert \bm{\alpha} \Vert \cdot \Vert \bm{\beta} \Vert}
+    \]
+    若内积空间中的两个向量 $\bm{\alpha}, \bm{\beta}$ 满足 $\langle \bm{\alpha}, \bm{\beta} \rangle = 0$，则称 $\bm{\alpha}$ 与 $\bm{\beta}$ 垂直或正交，记为 $\bm{\alpha} \perp \bm{\beta}$。
+\end{definition}
+
+\begin{remark}
+    正交的性质：
+    \begin{enumerate}
+        \item 零向量与任何向量都正交；
+        \item 若 $\bm{\alpha}$ 与 $\bm{\beta}$ 正交，则 $\bm{\beta}$ 也与 $\bm{\alpha}$ 正交；
+        \item 两个非零向量 $\bm{\alpha}, \bm{\beta}$ 正交时夹角为 $90^{\circ}$。
+    \end{enumerate}
+\end{remark}
+
+\begin{remark}
+    若 $\bm{\alpha}$ 与 $\bm{\beta}$ 正交，则 $\langle \bm{\alpha}, \bm{\beta} \rangle = \langle \bm{\beta}, \bm{\alpha} \rangle = 0$，于是有勾股定理 ${\Vert \bm{\alpha} + \bm{\beta} \Vert}^{2} = {\Vert \bm{\alpha} \Vert}^{2} + {\Vert \bm{\beta} \Vert}^{2}$；
+\end{remark}
+
+\begin{remark}
+    设 $V$ 是 $n$ 维实行向量空间，内积取标准内积，则得 Cauchy 不等式
+    \[
+        (x_{1}y_{1} + x_{2}y_{2} + \cdots + x_{n}y_{n})^{2} \leqslant  (x_{1}^{2} + x_{2}^{2} + \cdots + x_{n}^{2})(y_{1}^{2} + y_{2}^{2} + \cdots + y_{n}^{2})
+    \]
+\end{remark}
+
+\begin{remark}
+    设 $V$ 是由 $[a, b]$ 区间上的连续函数全体构成的实线性空间，内积定义为
+    \[
+        \langle f, g \rangle = \int_{a}^{b}f(t)g(t)\mathrm{d}t
+    \]
+    则得 Schuwarz 不等式
+    \[
+        \left(\int_{a}^{b}f(t)g(t)\mathrm{d}t\right)^{2} \leqslant \int_{a}^{b}f(t)^{2}\mathrm{d}t \int_{a}^{b}g(t)^{2}\mathrm{d}t
+    \]
+\end{remark}
+%——————————————————————————————————%
+
+\section{}
+
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{}
+
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{}
+
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{}
+
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{}
+
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{}
+
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{}
+
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{}
+
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{}
+
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{}
+
+
+
+
+
+
+%——————————————————————————————————%
+
+\section{}
+
+
+
+
+
+
