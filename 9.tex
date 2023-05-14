@@ -27,6 +27,10 @@
 \end{definition}
 
 \begin{remark}
+    实内积空间和复内积空间统称为内积空间。
+\end{remark}
+
+\begin{remark}
     由 $(1)$ 和 $(3)$，有 $\langle \bm{\alpha}, c\bm{\beta} \rangle = \overline{c}\langle \bm{\alpha}, \bm{\beta} \rangle$。
 \end{remark}
 
@@ -69,7 +73,7 @@
     \[
         \langle \bm{\alpha}, \bm{\beta} \rangle = \bm{\alpha}^{\mathrm{T}}\bm{H}\overline{\bm{\beta}}
     \]
-    则 $U$ 成为一个欧式空间。当 $\bm{H} = \bm{I}_n$，即 $\bm{H}$ 为单位阵时，$U$ 上的内积就是标准内积。
+    则 $U$ 成为一个酉空间。当 $\bm{H} = \bm{I}_n$，即 $\bm{H}$ 为单位阵时，$U$ 上的内积就是标准内积。
 
     复列向量空间的标准内积用矩阵乘法可表示为
     \[
@@ -83,7 +87,7 @@
 \end{proposition}
 
 \begin{definition}
-    设 $V$ 是内积空间，$\bm{\alpha}$ 是 $V$ 中的向量，定义 $\bm{\alpha}$ 的范数为
+    设 $V$ 是内积空间，$\bm{\alpha}$ 是 $V$ 中的向量，定义 $\bm{\alpha}$ 的长度（或称范数）为
     \[
         \Vert \bm{\alpha} \Vert = \sqrt{\langle \bm{\alpha}, \bm{\alpha} \rangle}
     \]
@@ -119,7 +123,7 @@
 \end{theorem}
 
 \begin{remark}
-    我们将 $(2)$ 称为 Cauchy-Schuwarz 不等式，$(3)$ 称为三角不等式。
+    我们将 $(2)$ 称为 Cauchy-Schuwarz 不等式，$(3)$ 称为三角形不等式。
 \end{remark}
 
 \begin{definition}
@@ -132,19 +136,20 @@
         \cos \theta = \frac{\vert \langle \bm{\alpha}, \bm{\beta} \rangle \vert}{\Vert \bm{\alpha} \Vert \cdot \Vert \bm{\beta} \Vert}
     \]
     若内积空间中的两个向量 $\bm{\alpha}, \bm{\beta}$ 满足 $\langle \bm{\alpha}, \bm{\beta} \rangle = 0$，则称 $\bm{\alpha}$ 与 $\bm{\beta}$ 垂直或正交，记为 $\bm{\alpha} \perp \bm{\beta}$。
-\end{definition}
 
-\begin{remark}
     正交的性质：
     \begin{enumerate}
         \item 零向量与任何向量都正交；
         \item 若 $\bm{\alpha}$ 与 $\bm{\beta}$ 正交，则 $\bm{\beta}$ 也与 $\bm{\alpha}$ 正交；
         \item 两个非零向量 $\bm{\alpha}, \bm{\beta}$ 正交时夹角为 $90^{\circ}$。
     \end{enumerate}
-\end{remark}
+\end{definition}
 
 \begin{remark}
-    若 $\bm{\alpha}$ 与 $\bm{\beta}$ 正交，则 $\langle \bm{\alpha}, \bm{\beta} \rangle = \langle \bm{\beta}, \bm{\alpha} \rangle = 0$，于是有勾股定理 ${\Vert \bm{\alpha} + \bm{\beta} \Vert}^{2} = {\Vert \bm{\alpha} \Vert}^{2} + {\Vert \bm{\beta} \Vert}^{2}$；
+    若 $\bm{\alpha}$ 与 $\bm{\beta}$ 正交，则 $\langle \bm{\alpha}, \bm{\beta} \rangle = \langle \bm{\beta}, \bm{\alpha} \rangle = 0$，于是有推广的勾股定理
+    \[
+        {\Vert \bm{\alpha} + \bm{\beta} \Vert}^{2} = {\Vert \bm{\alpha} \Vert}^{2} + {\Vert \bm{\beta} \Vert}^{2}
+    \]
 \end{remark}
 
 \begin{remark}
@@ -164,31 +169,292 @@
         \left(\int_{a}^{b}f(t)g(t)\mathrm{d}t\right)^{2} \leqslant \int_{a}^{b}f(t)^{2}\mathrm{d}t \int_{a}^{b}g(t)^{2}\mathrm{d}t
     \]
 \end{remark}
-%——————————————————————————————————%
 
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
+\begin{definition}
+    设 $V$ 是 $n$ 阶实矩阵空间，对任意的 $n$ 阶实矩阵 $\bm{A} = (a_{ij}), \bm{B} = (b_{ij})$，定义 $V$ 上的内积
+    \[
+        \langle \bm{A}, \bm{B} \rangle = \operatorname{tr}(\bm{AB}^{\mathrm{T}}) = \sum_{i = 1}^{n}\sum_{j = 1}^{n}a_{ij}b_{ij}
+    \]
+    设 $U$ 是 $n$ 阶复矩阵空间，对任意的 $n$ 阶复矩阵 $\bm{A} = (a_{ij}), \bm{B} = (b_{ij})$，定义 $U$ 上的内积
+    \[
+        \langle \bm{A}, \bm{B} \rangle = \operatorname{tr}(\bm{A}\overline{\bm{B}}^{\mathrm{T}}) = \sum_{i = 1}^{n}\sum_{j = 1}^{n}a_{ij}\overline{b_{ij}}
+    \]
+    两个内积统称为 Frobenius 内积。
+\end{definition}
 
 %——————————————————————————————————%
 
-\section{}
+\section{内积的表示和正交基}
+
+\begin{definition}
+    设 $V$ 是欧式空间。$\{\bm{v}_1, \bm{v}_2, \ldots,\bm{v}_n\}$ 是 $V$ 的一组基。则 $V$ 的内积在给定基下的表示
+    \[
+        \langle \bm{\alpha}, \bm{\beta} \rangle = \bm{x}^{\mathrm{T}}\bm{Gy}
+    \]
+    其中 $\bm{x}, \bm{y}$ 分别是向量 $\bm{\alpha}, \bm{\beta}$ 在给定基下的坐标向量，$\bm{G}$ 是基向量的 Gram 矩阵或内积空间在给定基下的度量矩阵。
+    \[
+        \bm{G} = \begin{pmatrix}
+            \langle \bm{v}_1, \bm{v}_1 \rangle & \langle \bm{v}_1, \bm{v}_2 \rangle & \cdots & \langle \bm{v}_1, \bm{v}_n \rangle   \\
+            \langle \bm{v}_2, \bm{v}_1 \rangle & \langle \bm{v}_2, \bm{v}_2 \rangle & \cdots & \langle \bm{v}_2, \bm{v}_n \rangle   \\
+            \vdots                             & \vdots                             & \      & \vdots                               \\
+            \langle \bm{v}_n, \bm{v}_1 \rangle & \langle \bm{v}_n, \bm{v}_2 \rangle & \cdots & \langle \bm{v}_n, \bm{v}_n \rangle \
+        \end{pmatrix}
+    \]
+    $\bm{G}$ 是一个正定实对称阵。
+\end{definition}
+
+\begin{definition}
+    酉空间的内积在给定基下的表示
+    \[
+        \langle \bm{\alpha}, \bm{\beta} \rangle = \bm{x}^{\mathrm{T}}\bm{H}\overline{\bm{y}}
+    \]
+    其中 $\bm{x}, \bm{y}$ 分别是向量 $\bm{\alpha}, \bm{\beta}$ 在给定基下的坐标向量，$\bm{H}$ 是正定 Hermite 矩阵。
+    \[
+          \bm{H} = \begin{pmatrix}
+            \langle \bm{v}_1, \bm{v}_1 \rangle & \langle \bm{v}_1, \bm{v}_2 \rangle & \cdots & \langle \bm{v}_1, \bm{v}_n \rangle   \\
+            \langle \bm{v}_2, \bm{v}_1 \rangle & \langle \bm{v}_2, \bm{v}_2 \rangle & \cdots & \langle \bm{v}_2, \bm{v}_n \rangle   \\
+            \vdots                             & \vdots                             & \      & \vdots                               \\
+            \langle \bm{v}_n, \bm{v}_1 \rangle & \langle \bm{v}_n, \bm{v}_2 \rangle & \cdots & \langle \bm{v}_n, \bm{v}_n \rangle \
+        \end{pmatrix}        
+    \]
+\end{definition}
+
+\begin{definition}
+    设 $\{\bm{e}_{1}, \bm{e}_{2}, \ldots, \bm{e}_{n}\}$ 是 $n$ 维内积空间 $V$ 的一组基。若 $e_{i} \perp e_{j}$ 对一切 $i \neq j$ 成立，则称这组基是 $V$ 的一组正交基。又若 $V$ 的一组正交基中每个基向量的长度都等于 $1$，则称这组正交基为标准正交基。
+\end{definition}
+
+\begin{lemma}
+    内积空间 $V$ 中的任意一组两两正交的非零向量必定线性无关。
+\end{lemma}
+
+\begin{lemma}
+    设向量 $\bm{\alpha}$ 和 $\bm{\beta}_1, \bm{\beta}_2, \ldots, \bm{\beta}_k$ 都正交，则 $\bm{\alpha}$ 和 $L(\bm{\beta}_1, \bm{\beta}_2, \ldots, \bm{\beta}_k)$ 中的每个向量都正交。
+\end{lemma}
+
+\begin{corollary}
+    $n$ 维内积空间中任意一个正交非零向量组的向量个数不超过 $n$。
+\end{corollary}
+
+\begin{theorem}{Gram-Schmidt 正交化方法}
+    设 $V$ 是内积空间，$\bm{u}_1, \bm{u}_2, \ldots, \bm{u}_m$ 是 $V$ 中 $m$ 个线性无关的向量，则在 $V$ 中存在 $m$ 个两两正交的非零向量 $\bm{v}_1, \bm{v}_2, \ldots,\bm{v}_m$，使由 $\{\bm{v}_1, \bm{v}_2, \ldots,\bm{v}_m\}$ 张成的子空间恰好为由 $\{\bm{u}_1, \bm{u}_2, \ldots, \bm{u}_m\}$ 张成的子空间，即 $\{\bm{v}_1, \bm{v}_2, \ldots,\bm{v}_m\}$ 是该子空间的一组正交基。
+\end{theorem}
+
+\begin{corollary}
+    任一有限维内积空间均有标准正交基。
+\end{corollary}
+
+\begin{definition}
+    设 $V$ 是 $n$ 维内积空间，$U$ 是 $V$ 的子空间，令
+    \[
+        U^{\perp} = \{\bm{v} \in V : \langle \bm{v}, U \rangle = 0\}
+    \]
+    这里 $\langle \bm{v}, U \rangle = 0$ 表示对一切 $\bm{u} \in U$，均有 $\langle \bm{v}, \bm{u} \rangle = 0$。则 $U^{\perp}$ 是 $V$ 的子空间，称为 $U$ 的正交补空间。
+\end{definition}
+
+\begin{theorem}
+    设 $V$ 是 $n$ 维内积空间，$U$ 是 $V$ 的子空间，则
+    \begin{enumerate}
+        \item $V = U \oplus U^{\perp}$；
+        \item $U$ 的任一组标准正交基均可扩张为 $V$ 的一组标准正交基。
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}
+    设 $V$ 是 $n$ 维内积空间，$V_1, V_2, \ldots, V_n$ 是 $V$ 的子空间。若对 $\forall \bm{\alpha} \in V_i$ 和 $\forall \bm{\beta} \in V_j$ 均有 $\langle \bm{\alpha}, \bm{\beta} \rangle = 0$，则称子空间 $V_i$ 和 $V_j$ 正交。若 $V = V_1 + V_2 + \cdots + V_k$ 且 $V_i$ 两两正交，则称 $V$ 是 $V_1, V_2, \ldots, V_k$ 的正交和，记为
+    \[
+        V = V_1 \perp V_2 \perp \cdots \perp V_k
+    \]
+\end{definition}
+
+\begin{lemma}
+    正交和必定为直和，且任一 $V_i$ 与其余子空间的和正交。
+\end{lemma}
+
+\begin{definition}
+    设 $V = V_1 \perp V_2 \perp \cdots \perp V_k$，定义 $V$ 上的线性变换 $\bm{E}_{i}(i = 1, 2, \ldots, k)$ 如下：若 $\bm{v} = \bm{v}_{1} + \cdots + \bm{v}_{i} + \cdots + \bm{v}_{k}(\bm{v}_{i} \in V_i)$，令 $\bm{E}_{i}(\bm{v}) = \bm{v}_{i}$。则 $\bm{E}_i$ 是 $V$ 上的线性变换，且满足
+    \begin{gather*}
+        \bm{E}_{i}^2 = \bm{E}_i \\
+        \bm{E}_{i}\bm{E}_{j} = \bm{0}\, (i \neq j) \\
+        \bm{E}_{1} + \bm{E}_{2} + \cdots + \bm{E}_{k} = \bm{I}_V
+    \end{gather*}
+    线性变换 $\bm{E}_i$ 称为 $V$ 到 $V_i$ 上的正交投影（简称投影）。
+\end{definition}
+
+\begin{proposition}
+    设 $U$ 是内积空间 $V$ 的子空间，$V = U \perp U^{\perp}$。设 $\bm{E}$ 是 $V$ 到 $U$ 上的正交投影，则对 $\forall \bm{\alpha}, \bm{\beta} \in V$，有
+    \[
+        \langle \bm{E}(\bm{\alpha}), \bm{\beta} \rangle = \langle \bm{\alpha}, \bm{E}({\bm{\beta}}) \rangle
+    \]
+\end{proposition}
+
+\begin{proposition}{Bessel 不等式}
+    设 $\{\bm{v}_1, \bm{v}_2, \ldots,\bm{v}_m\}$ 是内积空间 $V$ 中的正交非零向量组，$\bm{y}$ 是 $V$ 中任一向量，则
+    \[
+        \sum_{k = 1}^{m}\frac{{\vert \langle \bm{y}, \bm{v}_k \rangle \vert}^2}{{\Vert \bm{v}_k \Vert}^2} \leqslant {\Vert \bm{y} \Vert}^2
+    \]
+    且等号成立的充分必要条件是 $\bm{y}$ 属于由 $\{\bm{v}_1, \bm{v}_2, \ldots,\bm{v}_m\}$ 张成的子空间。
+\end{proposition}
+
+%——————————————————————————————————%
+
+\section{伴随}
+
+内积空间上的线性变换通常称为线性算子。
+
+\begin{definition}
+  设 $\varphi$ 是内积空间 $V$ 上的线性算子。若存在 $V$ 上的线性算子 $\varphi^*$，使等式
+  \[
+      \langle \varphi(\bm{\alpha}), \bm{\beta} \rangle = \langle \bm{\alpha}, \varphi^{*}(\bm{\beta}) \rangle
+  \]
+  对一切 $\bm{\alpha}, \bm{\beta} \in V$ 成立，则称 $\varphi^*$ 是 $\varphi$ 的伴随算子，简称为 $\varphi$ 的伴随。
+\end{definition}
+
+\begin{theorem}
+  设 $V$ 是 $n$ 维内积空间，$\varphi$ 是 $V$ 上的线性变换，则存在 $V$ 上唯一的线性变换 $\varphi^*$ 使对一切 $\bm{\alpha}, \bm{\beta} \in V$，有
+  \[
+      \langle \varphi(\bm{\alpha}), \bm{\beta} \rangle = \langle \bm{\alpha}, \varphi^{*}(\bm{\beta}) \rangle
+  \]
+\end{theorem}
+
+\begin{theorem}
+  设 $V$ 是 $n$ 维内积空间，$\{\bm{e}_{1}, \bm{e}_{2}, \ldots, \bm{e}_{n}\}$ 是 $V$ 的一组标准正交基。若 $V$ 上的线性算子 $\varphi$ 在这组基下的表示矩阵为 $\bm{A}$，则当 $V$ 是酉空间时，$\varphi^*$ 在同一组基下的表示矩阵为 $\overline{\bm{A}}^{\mathrm{T}}$，即 $\bm{A}$ 的共轭转置；当 $\bm{A}$ 是欧氏空间时，$\varphi^*$ 的表示矩阵为 $A^{\mathrm{T}}$，即 $\bm{A}$ 的转置。
+\end{theorem}
+
+\begin{theorem}
+  设 $V$ 是有限维内积空间，若 $\varphi$ 及 $\psi$ 是 $V$ 上的线性变换，$c$ 为常数，则
+  \begin{enumerate}
+    \item $(\varphi + \psi)^* = \varphi^* + \psi^*$；
+    \item $(c\varphi)^* = \overline{c}\varphi^*$；
+    \item $(\varphi\psi)^* = \psi^{*}\varphi^{*}$；
+    \item $(\varphi^*)^* = \varphi$。
+  \end{enumerate}
+\end{theorem}
+
+\begin{proposition}
+  设 $V$ 是 $n$ 维内积空间，$\varphi$ 是 $V$ 上的线性算子。
+  \begin{enumerate}
+    \item 若 $U$ 是 $\varphi$ 的不变子空间，则 $U^{\perp}$ 是 $\varphi^*$ 的不变子空间；
+    \item 若 $\varphi$ 的全体特征值为 $\lambda_1, \lambda_2, \ldots, \lambda_n$，则 $\varphi^*$ 的全体特征值为 $\overline{\lambda}_1, \overline{\lambda}_2, \ldots, \overline{\lambda}_n$。
+  \end{enumerate}
+\end{proposition}
 
 
+%——————————————————————————————————%
 
+\section{内积空间的同构、正交变换和酉变换}
 
+\begin{definition}
+  设 $V$ 与 $U$ 是域 $\mathbb{K}$ 上的内积空间，$\mathbb{K}$ 是实数域或复数域，$\varphi$ 是 $V \to U$ 的线性映射。若对 $\forall \bm{x}, \bm{y} \in V$，有
+  \[
+      \langle \varphi(\bm{x}), \varphi(\bm{y}) \rangle = \langle \bm{x}, \bm{y} \rangle
+  \]
+  则称 $\varphi$ 是 $V \to U$ 的保持内积的线性映射。又若 $\varphi$ 作为线性映射是同构，则称 $\varphi$ 是内积空间 $V$ 到 $U$ 的保积同构。
+\end{definition}
+
+\begin{remark}
+  在不引起误解的情况下，保积同构简称为同构。
+\end{remark}
+
+\begin{remark}
+  保持内积的线性映射一定是单射。
+\end{remark}
+
+\begin{remark}
+  保积同构是等价关系。
+\end{remark}
+
+\begin{proposition}
+  若 $\varphi$ 是内积空间 $V$ 到内积空间 $U$ 的保持范数的线性映射，则 $\varphi$ 保持内积。
+\end{proposition}
+
+\begin{theorem}
+  设 $V$ 和 $U$ 同时是 $n$ 维实或复的内积空间，若 $\varphi$ 是 $V \to U$ 的线性映射，则下列命题等价：
+  \begin{enumerate}
+    \item $\varphi$ 保持内积；
+    \item $\varphi$ 是保积同构；
+    \item $\varphi$ 将 $V$ 的任一组标准正交基变成 $U$ 的一组标准正交基；
+    \item $\varphi$ 将 $V$ 的某一组标准正交基变成 $U$ 的一组标准正交基。
+  \end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+  两个同时是实或复的有限维内积空间 $V$ 与 $U$ 同构的充分必要条件是它们有相同的维数。
+\end{corollary}
+
+\begin{definition}
+  设 $\varphi$ 是内积空间 $V$ 上保持内积的线性变换，若 $V$ 是欧式空间，则称 $\varphi$ 为正交变换或正交算子；若 $V$ 是酉空间，则称 $\varphi$ 为酉变换或酉算子。
+\end{definition}
+
+\begin{remark}
+  正交变换和酉变换都是可逆线性变换。
+\end{remark}
+
+\begin{theorem}
+  设 $\varphi$ 是欧式空间或酉空间上的线性变换，则 $\varphi$ 是正交变换或酉变换的充分必要条件是 $\varphi$ 可逆，且
+  \[
+      \varphi^{*} = \varphi^{-1}
+  \]
+\end{theorem}
+
+\begin{definition}
+  设 $\bm{A}$ 是 $n$ 阶实方阵，若 $\bm{A}^{\mathrm{T}} = \bm{A}^{-1}$，则称 $\bm{A}$ 是正交矩阵。设 $\bm{C}$ 是 $n$ 阶复方阵，若 $\overline{\bm{C}}^{\mathrm{T}} = \bm{C}^{-1}$，则称 $\bm{C}$ 是酉矩阵。
+\end{definition}
+
+\begin{theorem}
+  设 $\varphi$ 是欧氏空间（酉空间）$V$ 上的正交变换（酉变换），则在 $V$ 上的任一组标准正交基下，$\varphi$ 的表示矩阵是正交矩阵（酉矩阵）。
+\end{theorem}
+
+\begin{theorem}
+  设 $\bm{A} = (a_{ij})$ 是 $n$ 阶实矩阵，则 $\bm{A}$ 是正交矩阵的充分必要条件是：
+  \begin{gather*}
+    a_{i1}a_{j1} + a_{i2}a_{j2} + \cdots + a_{in}a_{jn} = 0, \quad (i \neq j) \\
+    a_{i1}^{2} + a_{i2}^{2} + \cdots + a_{in}^{2} = 1
+  \end{gather*}
+  或
+  \begin{gather*}
+    a_{1i}a_{1j} + a_{2i}a_{2j} + \cdots + a_{ni}a_{nj} = 0, \quad (i \neq j) \\
+    a_{1i}^{2} + a_{2i}^{2} + \cdots + a_{ni}^{2} = 1
+  \end{gather*}
+  即 $\bm{A}$ 为正交矩阵的充分必要条件是它的 $n$ 个行向量是 $n$ 维实行向量空间（取标准内积）的标准正交基，或它的 $n$ 个列向量是 $n$ 维实列向量空间（取标准内积）的标准正交基。
+\end{theorem}
+
+\begin{theorem}
+  设 $\bm{A} = (a_{ij})$ 是 $n$ 阶复矩阵，则 $\bm{A}$ 是酉矩阵的充分必要条件是
+  \begin{gather*}
+    a_{i1}\overline{a}_{j1} + a_{i2}\overline{a}_{j2} + \cdots + a_{in}\overline{a}_{jn} = 0, \quad (i \neq j) \\
+    {\vert a_{i1} \vert}^{2} + {\vert a_{i2} \vert}^{2} + \cdots + {\vert a_{in} \vert}^{2} = 1
+  \end{gather*}
+  或
+  \begin{gather*}
+    a_{1i}\overline{a}_{1j} + a_{2i}\overline{a}_{2j} + \cdots + a_{ni}\overline{a}_{nj} = 0, \quad (i \neq j) \\
+    {\vert a_{1i} \vert}^{2} + {\vert a_{2i} \vert}^{2} + \cdots + {\vert a_{ni} \vert}^{2} = 1
+  \end{gather*}
+  即 $\bm{A}$ 为酉矩阵的充分必要条件是它的 $n$ 个行向量是 $n$ 维复行向量空间（取标准内积）的标准正交基，或它的 $n$ 个列向量是 $n$ 维复列向量空间（取标准内积）的标准正交基。
+\end{theorem}
+
+\begin{theorem}
+  若 $n$ 阶实矩阵 $\bm{A}$ 是正交矩阵，则
+  \begin{enumerate}
+    \item $\bm{A}$ 的行列式值等于 $1$ 或 $-1$；
+    \item $\bm{A}$ 的特征值的模长等于 $1$。
+  \end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+  若 $n$ 阶复矩阵 $\bm{A}$ 是酉矩阵，则
+  \begin{enumerate}
+    \item $\bm{A}$ 的行列式值的模长等于 $1$；
+    \item $\bm{A}$ 的特征值的模长等于 $1$。
+  \end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+  设 $\bm{A}$ 是 $n$ 阶实（复）矩阵，则 $\bm{A}$ 可分解为
+  \[
+      \bm{A} = \bm{QR}
+  \]
+  其中 $\bm{Q}$ 是正交（酉）矩阵，$\bm{R}$ 是主对角线上的元素大于等于零的上三角阵，并且若 $\bm{A}$ 是可逆阵，则这样的分解唯一。
+\end{theorem}
 
 
 %——————————————————————————————————%
