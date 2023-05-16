@@ -210,12 +210,12 @@
     \]
     其中 $\bm{x}, \bm{y}$ 分别是向量 $\bm{\alpha}, \bm{\beta}$ 在给定基下的坐标向量，$\bm{H}$ 是正定 Hermite 矩阵。
     \[
-          \bm{H} = \begin{pmatrix}
+        \bm{H} = \begin{pmatrix}
             \langle \bm{v}_1, \bm{v}_1 \rangle & \langle \bm{v}_1, \bm{v}_2 \rangle & \cdots & \langle \bm{v}_1, \bm{v}_n \rangle   \\
             \langle \bm{v}_2, \bm{v}_1 \rangle & \langle \bm{v}_2, \bm{v}_2 \rangle & \cdots & \langle \bm{v}_2, \bm{v}_n \rangle   \\
             \vdots                             & \vdots                             & \      & \vdots                               \\
             \langle \bm{v}_n, \bm{v}_1 \rangle & \langle \bm{v}_n, \bm{v}_2 \rangle & \cdots & \langle \bm{v}_n, \bm{v}_n \rangle \
-        \end{pmatrix}        
+        \end{pmatrix}
     \]
 \end{definition}
 
@@ -302,40 +302,40 @@
 内积空间上的线性变换通常称为线性算子。
 
 \begin{definition}
-  设 $\varphi$ 是内积空间 $V$ 上的线性算子。若存在 $V$ 上的线性算子 $\varphi^*$，使等式
-  \[
-      \langle \varphi(\bm{\alpha}), \bm{\beta} \rangle = \langle \bm{\alpha}, \varphi^{*}(\bm{\beta}) \rangle
-  \]
-  对一切 $\bm{\alpha}, \bm{\beta} \in V$ 成立，则称 $\varphi^*$ 是 $\varphi$ 的伴随算子，简称为 $\varphi$ 的伴随。
+    设 $\varphi$ 是内积空间 $V$ 上的线性算子。若存在 $V$ 上的线性算子 $\varphi^*$，使等式
+    \[
+        \langle \varphi(\bm{\alpha}), \bm{\beta} \rangle = \langle \bm{\alpha}, \varphi^{*}(\bm{\beta}) \rangle
+    \]
+    对一切 $\bm{\alpha}, \bm{\beta} \in V$ 成立，则称 $\varphi^*$ 是 $\varphi$ 的伴随算子，简称为 $\varphi$ 的伴随。
 \end{definition}
 
 \begin{theorem}
-  设 $V$ 是 $n$ 维内积空间，$\varphi$ 是 $V$ 上的线性变换，则存在 $V$ 上唯一的线性变换 $\varphi^*$ 使对一切 $\bm{\alpha}, \bm{\beta} \in V$，有
-  \[
-      \langle \varphi(\bm{\alpha}), \bm{\beta} \rangle = \langle \bm{\alpha}, \varphi^{*}(\bm{\beta}) \rangle
-  \]
+    设 $V$ 是 $n$ 维内积空间，$\varphi$ 是 $V$ 上的线性变换，则存在 $V$ 上唯一的线性变换 $\varphi^*$ 使对一切 $\bm{\alpha}, \bm{\beta} \in V$，有
+    \[
+        \langle \varphi(\bm{\alpha}), \bm{\beta} \rangle = \langle \bm{\alpha}, \varphi^{*}(\bm{\beta}) \rangle
+    \]
 \end{theorem}
 
 \begin{theorem}
-  设 $V$ 是 $n$ 维内积空间，$\{\bm{e}_{1}, \bm{e}_{2}, \ldots, \bm{e}_{n}\}$ 是 $V$ 的一组标准正交基。若 $V$ 上的线性算子 $\varphi$ 在这组基下的表示矩阵为 $\bm{A}$，则当 $V$ 是酉空间时，$\varphi^*$ 在同一组基下的表示矩阵为 $\overline{\bm{A}}^{\mathrm{T}}$，即 $\bm{A}$ 的共轭转置；当 $\bm{A}$ 是欧氏空间时，$\varphi^*$ 的表示矩阵为 $A^{\mathrm{T}}$，即 $\bm{A}$ 的转置。
+    设 $V$ 是 $n$ 维内积空间，$\{\bm{e}_{1}, \bm{e}_{2}, \ldots, \bm{e}_{n}\}$ 是 $V$ 的一组标准正交基。若 $V$ 上的线性算子 $\varphi$ 在这组基下的表示矩阵为 $\bm{A}$，则当 $V$ 是酉空间时，$\varphi^*$ 在同一组基下的表示矩阵为 $\overline{\bm{A}}^{\mathrm{T}}$，即 $\bm{A}$ 的共轭转置；当 $\bm{A}$ 是欧氏空间时，$\varphi^*$ 的表示矩阵为 $A^{\mathrm{T}}$，即 $\bm{A}$ 的转置。
 \end{theorem}
 
 \begin{theorem}
-  设 $V$ 是有限维内积空间，若 $\varphi$ 及 $\psi$ 是 $V$ 上的线性变换，$c$ 为常数，则
-  \begin{enumerate}
-    \item $(\varphi + \psi)^* = \varphi^* + \psi^*$；
-    \item $(c\varphi)^* = \overline{c}\varphi^*$；
-    \item $(\varphi\psi)^* = \psi^{*}\varphi^{*}$；
-    \item $(\varphi^*)^* = \varphi$。
-  \end{enumerate}
+    设 $V$ 是有限维内积空间，若 $\varphi$ 及 $\psi$ 是 $V$ 上的线性变换，$c$ 为常数，则
+    \begin{enumerate}
+        \item $(\varphi + \psi)^* = \varphi^* + \psi^*$；
+        \item $(c\varphi)^* = \overline{c}\varphi^*$；
+        \item $(\varphi\psi)^* = \psi^{*}\varphi^{*}$；
+        \item $(\varphi^*)^* = \varphi$。
+    \end{enumerate}
 \end{theorem}
 
 \begin{proposition}
-  设 $V$ 是 $n$ 维内积空间，$\varphi$ 是 $V$ 上的线性算子。
-  \begin{enumerate}
-    \item 若 $U$ 是 $\varphi$ 的不变子空间，则 $U^{\perp}$ 是 $\varphi^*$ 的不变子空间；
-    \item 若 $\varphi$ 的全体特征值为 $\lambda_1, \lambda_2, \ldots, \lambda_n$，则 $\varphi^*$ 的全体特征值为 $\overline{\lambda}_1, \overline{\lambda}_2, \ldots, \overline{\lambda}_n$。
-  \end{enumerate}
+    设 $V$ 是 $n$ 维内积空间，$\varphi$ 是 $V$ 上的线性算子。
+    \begin{enumerate}
+        \item 若 $U$ 是 $\varphi$ 的不变子空间，则 $U^{\perp}$ 是 $\varphi^*$ 的不变子空间；
+        \item 若 $\varphi$ 的全体特征值为 $\lambda_1, \lambda_2, \ldots, \lambda_n$，则 $\varphi^*$ 的全体特征值为 $\overline{\lambda}_1, \overline{\lambda}_2, \ldots, \overline{\lambda}_n$。
+    \end{enumerate}
 \end{proposition}
 
 
@@ -344,188 +344,237 @@
 \section{内积空间的同构、正交变换和酉变换}
 
 \begin{definition}
-  设 $V$ 与 $U$ 是域 $\mathbb{K}$ 上的内积空间，$\mathbb{K}$ 是实数域或复数域，$\varphi$ 是 $V \to U$ 的线性映射。若对 $\forall \bm{x}, \bm{y} \in V$，有
-  \[
-      \langle \varphi(\bm{x}), \varphi(\bm{y}) \rangle = \langle \bm{x}, \bm{y} \rangle
-  \]
-  则称 $\varphi$ 是 $V \to U$ 的保持内积的线性映射。又若 $\varphi$ 作为线性映射是同构，则称 $\varphi$ 是内积空间 $V$ 到 $U$ 的保积同构。
+    设 $V$ 与 $U$ 是域 $\mathbb{K}$ 上的内积空间，$\mathbb{K}$ 是实数域或复数域，$\varphi$ 是 $V \to U$ 的线性映射。若对 $\forall \bm{x}, \bm{y} \in V$，有
+    \[
+        \langle \varphi(\bm{x}), \varphi(\bm{y}) \rangle = \langle \bm{x}, \bm{y} \rangle
+    \]
+    则称 $\varphi$ 是 $V \to U$ 的保持内积的线性映射。又若 $\varphi$ 作为线性映射是同构，则称 $\varphi$ 是内积空间 $V$ 到 $U$ 的保积同构。
 \end{definition}
 
 \begin{remark}
-  在不引起误解的情况下，保积同构简称为同构。
+    在不引起误解的情况下，保积同构简称为同构。
 \end{remark}
 
 \begin{remark}
-  保持内积的线性映射一定是单射。
+    保持内积的线性映射一定是单射。
 \end{remark}
 
 \begin{remark}
-  保积同构是等价关系。
+    保积同构是等价关系。
 \end{remark}
 
 \begin{proposition}
-  若 $\varphi$ 是内积空间 $V$ 到内积空间 $U$ 的保持范数的线性映射，则 $\varphi$ 保持内积。
+    若 $\varphi$ 是内积空间 $V$ 到内积空间 $U$ 的保持范数的线性映射，则 $\varphi$ 保持内积。
 \end{proposition}
 
 \begin{theorem}
-  设 $V$ 和 $U$ 同时是 $n$ 维实或复的内积空间，若 $\varphi$ 是 $V \to U$ 的线性映射，则下列命题等价：
-  \begin{enumerate}
-    \item $\varphi$ 保持内积；
-    \item $\varphi$ 是保积同构；
-    \item $\varphi$ 将 $V$ 的任一组标准正交基变成 $U$ 的一组标准正交基；
-    \item $\varphi$ 将 $V$ 的某一组标准正交基变成 $U$ 的一组标准正交基。
-  \end{enumerate}
+    设 $V$ 和 $U$ 同时是 $n$ 维实或复的内积空间，若 $\varphi$ 是 $V \to U$ 的线性映射，则下列命题等价：
+    \begin{enumerate}
+        \item $\varphi$ 保持内积；
+        \item $\varphi$ 是保积同构；
+        \item $\varphi$ 将 $V$ 的任一组标准正交基变成 $U$ 的一组标准正交基；
+        \item $\varphi$ 将 $V$ 的某一组标准正交基变成 $U$ 的一组标准正交基。
+    \end{enumerate}
 \end{theorem}
 
 \begin{corollary}
-  两个同时是实或复的有限维内积空间 $V$ 与 $U$ 同构的充分必要条件是它们有相同的维数。
+    两个同时是实或复的有限维内积空间 $V$ 与 $U$ 同构的充分必要条件是它们有相同的维数。
 \end{corollary}
 
 \begin{definition}
-  设 $\varphi$ 是内积空间 $V$ 上保持内积的线性变换，若 $V$ 是欧式空间，则称 $\varphi$ 为正交变换或正交算子；若 $V$ 是酉空间，则称 $\varphi$ 为酉变换或酉算子。
+    设 $\varphi$ 是内积空间 $V$ 上保持内积的线性变换，若 $V$ 是欧式空间，则称 $\varphi$ 为正交变换或正交算子；若 $V$ 是酉空间，则称 $\varphi$ 为酉变换或酉算子。
 \end{definition}
 
 \begin{remark}
-  正交变换和酉变换都是可逆线性变换。
+    正交变换和酉变换都是可逆线性变换。
 \end{remark}
 
 \begin{theorem}
-  设 $\varphi$ 是欧式空间或酉空间上的线性变换，则 $\varphi$ 是正交变换或酉变换的充分必要条件是 $\varphi$ 可逆，且
-  \[
-      \varphi^{*} = \varphi^{-1}
-  \]
+    设 $\varphi$ 是欧式空间或酉空间上的线性变换，则 $\varphi$ 是正交变换或酉变换的充分必要条件是 $\varphi$ 可逆，且
+    \[
+        \varphi^{*} = \varphi^{-1}
+    \]
 \end{theorem}
 
 \begin{definition}
-  设 $\bm{A}$ 是 $n$ 阶实方阵，若 $\bm{A}^{\mathrm{T}} = \bm{A}^{-1}$，则称 $\bm{A}$ 是正交矩阵。设 $\bm{C}$ 是 $n$ 阶复方阵，若 $\overline{\bm{C}}^{\mathrm{T}} = \bm{C}^{-1}$，则称 $\bm{C}$ 是酉矩阵。
+    设 $\bm{A}$ 是 $n$ 阶实方阵，若 $\bm{A}^{\mathrm{T}} = \bm{A}^{-1}$，则称 $\bm{A}$ 是正交矩阵。设 $\bm{C}$ 是 $n$ 阶复方阵，若 $\overline{\bm{C}}^{\mathrm{T}} = \bm{C}^{-1}$，则称 $\bm{C}$ 是酉矩阵。
 \end{definition}
 
 \begin{theorem}
-  设 $\varphi$ 是欧氏空间（酉空间）$V$ 上的正交变换（酉变换），则在 $V$ 上的任一组标准正交基下，$\varphi$ 的表示矩阵是正交矩阵（酉矩阵）。
+    设 $\varphi$ 是欧氏空间（酉空间）$V$ 上的正交变换（酉变换），则在 $V$ 上的任一组标准正交基下，$\varphi$ 的表示矩阵是正交矩阵（酉矩阵）。
 \end{theorem}
 
 \begin{theorem}
-  设 $\bm{A} = (a_{ij})$ 是 $n$ 阶实矩阵，则 $\bm{A}$ 是正交矩阵的充分必要条件是：
-  \begin{gather*}
-    a_{i1}a_{j1} + a_{i2}a_{j2} + \cdots + a_{in}a_{jn} = 0, \quad (i \neq j) \\
-    a_{i1}^{2} + a_{i2}^{2} + \cdots + a_{in}^{2} = 1
-  \end{gather*}
-  或
-  \begin{gather*}
-    a_{1i}a_{1j} + a_{2i}a_{2j} + \cdots + a_{ni}a_{nj} = 0, \quad (i \neq j) \\
-    a_{1i}^{2} + a_{2i}^{2} + \cdots + a_{ni}^{2} = 1
-  \end{gather*}
-  即 $\bm{A}$ 为正交矩阵的充分必要条件是它的 $n$ 个行向量是 $n$ 维实行向量空间（取标准内积）的标准正交基，或它的 $n$ 个列向量是 $n$ 维实列向量空间（取标准内积）的标准正交基。
+    设 $\bm{A} = (a_{ij})$ 是 $n$ 阶实矩阵，则 $\bm{A}$ 是正交矩阵的充分必要条件是：
+    \begin{gather*}
+        a_{i1}a_{j1} + a_{i2}a_{j2} + \cdots + a_{in}a_{jn} = 0, \quad (i \neq j) \\
+        a_{i1}^{2} + a_{i2}^{2} + \cdots + a_{in}^{2} = 1
+    \end{gather*}
+    或
+    \begin{gather*}
+        a_{1i}a_{1j} + a_{2i}a_{2j} + \cdots + a_{ni}a_{nj} = 0, \quad (i \neq j) \\
+        a_{1i}^{2} + a_{2i}^{2} + \cdots + a_{ni}^{2} = 1
+    \end{gather*}
+    即 $\bm{A}$ 为正交矩阵的充分必要条件是它的 $n$ 个行向量是 $n$ 维实行向量空间（取标准内积）的标准正交基，或它的 $n$ 个列向量是 $n$ 维实列向量空间（取标准内积）的标准正交基。
 \end{theorem}
 
 \begin{theorem}
-  设 $\bm{A} = (a_{ij})$ 是 $n$ 阶复矩阵，则 $\bm{A}$ 是酉矩阵的充分必要条件是
-  \begin{gather*}
-    a_{i1}\overline{a}_{j1} + a_{i2}\overline{a}_{j2} + \cdots + a_{in}\overline{a}_{jn} = 0, \quad (i \neq j) \\
-    {\vert a_{i1} \vert}^{2} + {\vert a_{i2} \vert}^{2} + \cdots + {\vert a_{in} \vert}^{2} = 1
-  \end{gather*}
-  或
-  \begin{gather*}
-    a_{1i}\overline{a}_{1j} + a_{2i}\overline{a}_{2j} + \cdots + a_{ni}\overline{a}_{nj} = 0, \quad (i \neq j) \\
-    {\vert a_{1i} \vert}^{2} + {\vert a_{2i} \vert}^{2} + \cdots + {\vert a_{ni} \vert}^{2} = 1
-  \end{gather*}
-  即 $\bm{A}$ 为酉矩阵的充分必要条件是它的 $n$ 个行向量是 $n$ 维复行向量空间（取标准内积）的标准正交基，或它的 $n$ 个列向量是 $n$ 维复列向量空间（取标准内积）的标准正交基。
+    设 $\bm{A} = (a_{ij})$ 是 $n$ 阶复矩阵，则 $\bm{A}$ 是酉矩阵的充分必要条件是
+    \begin{gather*}
+        a_{i1}\overline{a}_{j1} + a_{i2}\overline{a}_{j2} + \cdots + a_{in}\overline{a}_{jn} = 0, \quad (i \neq j) \\
+        {\vert a_{i1} \vert}^{2} + {\vert a_{i2} \vert}^{2} + \cdots + {\vert a_{in} \vert}^{2} = 1
+    \end{gather*}
+    或
+    \begin{gather*}
+        a_{1i}\overline{a}_{1j} + a_{2i}\overline{a}_{2j} + \cdots + a_{ni}\overline{a}_{nj} = 0, \quad (i \neq j) \\
+        {\vert a_{1i} \vert}^{2} + {\vert a_{2i} \vert}^{2} + \cdots + {\vert a_{ni} \vert}^{2} = 1
+    \end{gather*}
+    即 $\bm{A}$ 为酉矩阵的充分必要条件是它的 $n$ 个行向量是 $n$ 维复行向量空间（取标准内积）的标准正交基，或它的 $n$ 个列向量是 $n$ 维复列向量空间（取标准内积）的标准正交基。
 \end{theorem}
 
 \begin{theorem}
-  若 $n$ 阶实矩阵 $\bm{A}$ 是正交矩阵，则
-  \begin{enumerate}
-    \item $\bm{A}$ 的行列式值等于 $1$ 或 $-1$；
-    \item $\bm{A}$ 的特征值的模长等于 $1$。
-  \end{enumerate}
+    若 $n$ 阶实矩阵 $\bm{A}$ 是正交矩阵，则
+    \begin{enumerate}
+        \item $\bm{A}$ 的行列式值等于 $1$ 或 $-1$；
+        \item $\bm{A}$ 的特征值的模长等于 $1$。
+    \end{enumerate}
 \end{theorem}
 
 \begin{theorem}
-  若 $n$ 阶复矩阵 $\bm{A}$ 是酉矩阵，则
-  \begin{enumerate}
-    \item $\bm{A}$ 的行列式值的模长等于 $1$；
-    \item $\bm{A}$ 的特征值的模长等于 $1$。
-  \end{enumerate}
+    若 $n$ 阶复矩阵 $\bm{A}$ 是酉矩阵，则
+    \begin{enumerate}
+        \item $\bm{A}$ 的行列式值的模长等于 $1$；
+        \item $\bm{A}$ 的特征值的模长等于 $1$。
+    \end{enumerate}
 \end{theorem}
 
 \begin{theorem}
-  设 $\bm{A}$ 是 $n$ 阶实（复）矩阵，则 $\bm{A}$ 可分解为
+    设 $\bm{A}$ 是 $n$ 阶实（复）矩阵，则 $\bm{A}$ 可分解为
+    \[
+        \bm{A} = \bm{QR}
+    \]
+    其中 $\bm{Q}$ 是正交（酉）矩阵，$\bm{R}$ 是主对角线上的元素大于等于零的上三角阵，并且若 $\bm{A}$ 是可逆阵，则这样的分解唯一。
+\end{theorem}
+
+
+%——————————————————————————————————%
+
+\section{自伴随算子}
+
+\begin{lemma}
+    欧氏空间中两组标准正交基之间的过渡矩阵是正交矩阵，酉空间中量子标准正交基之间的过渡矩阵是酉矩阵。
+\end{lemma}
+
+\begin{definition}
+    设 $\bm{A}, \bm{B}$ 是 $n$ 阶实矩阵。若存在正交矩阵 $\bm{P}$，使 $\bm{B} = \bm{P}^{\mathrm{T}}\bm{AP}$，则称 $\bm{B}$ 和 $\bm{A}$ 正交相似。
+    设 $\bm{A}, \bm{B}$ 是 $n$ 阶复矩阵。若存在酉矩阵 $\bm{P}$，使 $\bm{B} = \overline{\bm{P}}^{\mathrm{T}}\bm{AP}$，则称 $\bm{B}$ 和 $\bm{A}$ 酉相似。
+\end{definition}
+
+\begin{remark}
+    正交（酉）相似是等价关系。
+\end{remark}
+
+\begin{definition}
+    设 $\varphi$ 是内积空间 $V$ 上的线性变换，$\varphi^*$ 是 $\varphi$ 的伴随。若 $\varphi^* = \varphi$，则称 $\varphi$ 是自伴随算子。当 $V$ 是欧式空间时，$\varphi$ 也称为对称算子或对称变换；当 $V$ 是酉空间时，$\varepsilon$ 也称为 Hermite 算子或 Hermite 变换。
+\end{definition}
+
+\begin{theorem}
+    设 $V$ 是 $n$ 维酉空间，$\varphi$ 是 $V$ 上的自伴随算子，则 $\varphi$ 的特征值全是实数且属于不同特征值的特征向量互相正交。
+\end{theorem}
+
+\begin{corollary}
+    Hermite 矩阵的特征值全是实数，实对称阵的特征值也全是实数。这两种矩阵属于不同特征值的特征向量互相正交。
+\end{corollary}
+
+\begin{theorem}
+    设 $V$ 是 $n$ 维内积空间，$\varphi$ 是 $V$ 上的自伴随算子，则存在 $V$ 的一组正交基，使 $\varphi$ 在这组基下的表示矩阵为实对角阵，且这组基恰好是 $\varphi$ 的 $n$ 个线性无关的特征向量。
+\end{theorem}
+
+\begin{theorem}
+    \begin{enumerate}
+        \item 设 $\bm{A}$ 是 $n$ 阶实对称阵，则存在正交矩阵 $\bm{P}$，使 $\bm{P}^{\mathrm{T}}\bm{AP}$ 为对角阵，且 $\bm{P}$ 的 $n$ 个列向量恰好为 $\bm{A}$ 的 $n$ 个两两正交的单位特征向量。
+        \item 设 $\bm{A}$ 是 $n$ 阶 Hermite 矩阵，则存在酉矩阵 $\bm{P}$，使 $\overline{\bm{P}}^{\mathrm{T}}\bm{AP}$ 为对角阵，且 $\bm{P}$ 的 $n$ 个列向量恰好为 $\bm{A}$ 的 $n$ 个两两正交的单位特征向量。
+    \end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+    实对称阵的全体特征值是实对称阵在正交相似关系下的全系部变量，Hermite 矩阵的全体特征值是 Hermite 矩阵在酉相似关系下的全系部变量。
+\end{corollary}
+
+\begin{theorem}
+    设 $f(x) = \bm{x}^{\mathrm{T}}\bm{Ax}$ 是 $n$ 元实二次型，系数矩阵 $\bm{A}$ 的特征值为 $\lambda_1, \lambda_2, \ldots, \lambda_n$，则 $f$ 经过正交变换 $\bm{x} = \bm{Py}$ 可以化为下列标准型
+    \[
+        \lambda_{1}y_{1}^{2} + \lambda_{2}y_{2}^{2} + \cdots + \lambda_{n}y_{n}^{2}
+    \]
+    因此 $f$ 的正惯性指数等于 $\bm{A}$ 的正特征值个数，负惯性指数等于 $\bm{A}$ 的负特征值个数，$f$ 的秩等于 $\bm{A}$ 的非零特征值的个数。
+\end{theorem}
+
+\begin{corollary}
+    设 $f(x) = \bm{x}^{\mathrm{T}}\bm{Ax}$ 是 $n$ 元实二次型，则
+    \begin{enumerate}
+        \item $f$ 是正定型当且仅当系数矩阵 $\bm{A}$ 的特征值全是正数；
+        \item $f$ 是负定型当且仅当 $\bm{A}$ 的特征值全是负数；
+        \item $f$ 是半正定型当且仅当 $\bm{A}$ 的特征值全是非负数；
+        \item $f$ 是半负定型当且仅当 $\bm{A}$ 的特征值全是非正数；
+    \end{enumerate}
+
+\end{corollary}
+
+%——————————————————————————————————%
+
+\section{复正规算子}
+
+\begin{definition}
+设 $\varphi$ 是内积空间 $V$ 上的线性变换，$\varphi^*$ 是其伴随。若 $\varphi\varphi^* = \varphi^*\varphi$，则称 $\varphi$ 是 $V$ 上的正规算子（欧式空间上的称为实正规算子，酉空间上的称为复正规算子）。复矩阵 $\bm{A}$ 若满足 $\overline{\bm{A}}^{\mathrm{T}}\bm{A} = \bm{A}\overline{\bm{A}}^{\mathrm{T}}$，则称 $\bm{A}$ 为复正规矩阵。实矩阵 $\bm{A}$ 若满足 $\bm{A}^{\mathrm{T}}\bm{A} = \bm{AA}^{\mathrm{T}}$，则称 $\bm{A}$ 为实正规矩阵。
+\end{definition}
+
+\begin{lemma}
+    设 $\varphi$ 是内积空间 $V$ 上的正规算子，则对 $\forall \alpha \in V$，有
+    \[
+        \Vert \varphi(\alpha) \Vert = \Vert \varphi^*(\alpha) \Vert
+    \]
+\end{lemma}
+
+\begin{proposition}
+    设 $V$ 是 $n$ 维酉空间，$\varphi $ 是 $V$ 上的正规算子。
+    \begin{enumerate}
+        \item 向量 $\bm{u}$ 是 $\varphi$ 属于特征值 $\lambda$ 的特征向量的充分必要条件为 $\bm{u}$ 是 $\varphi^*$ 属于特征值 $\overline{\lambda}$ 的特征向量；
+        \item 属于 $\varphi$ 的不同特征值的特征向量必定正交。
+    \end{enumerate}
+\end{proposition}
+
+\begin{lemma}
+    设 $V$ 是 $n$ 维酉空间，$\varphi $ 是 $V$ 上的线性变换，$\{\bm{e}_{1}, \bm{e}_{2}, \ldots, \bm{e}_{n}\}$ 是 $V$ 的一组标准正交基。又设 $\varphi$ 在这组基下的表示矩阵 $\bm{A}$ 为上三角阵，则 $\varphi$ 是正规算子的充分必要条件为 $\bm{A}$ 是对角阵。
+\end{lemma}
+
+\begin{theorem}{Schur 定理}
+  设 $V$ 是 $n$ 维酉空间，$\varphi $ 是 $V$ 上的线性算子，则存在 $V$ 的一组标准正交基，使得 $\varphi$ 在这组基下的表示矩阵为上三角阵。
+\end{theorem}
+
+\begin{corollary}{Schur 定理}
+  任一 $n$ 阶复矩阵均酉相似于一个上三角阵。
+\end{corollary}
+
+\begin{theorem}
+   设 $V$ 是 $n$ 维酉空间，$\varphi $ 是 $V$ 上的线性算子，则 $\varphi$ 为正规算子的充分必要条件是存在 $V$ 的一组标准正交基，使得 $\varphi$ 在这组基下的表示矩阵是对角阵。特别地，这组基下恰好是 $\varphi$ 的 $n$ 个线性无关的特征向量。
+\end{theorem}
+
+\begin{theorem}
+  复矩阵 $\bm{A}$ 为复正规矩阵的充分必要条件是 $\bm{A}$ 酉相似于对角阵。
+\end{theorem}
+
+\begin{proposition}
+  设 $\varphi$ 是 $n$ 维酉空间 $V$ 上的线性算子，$\lambda_1, \lambda_2, \ldots, \lambda_k$ 是 $\varphi$ 的全体不同特征值，$V_1, V_2, \ldots, V_k$ 是对应的特征子空间，则 $\varphi$ 是正规算子的充分必要条件为
   \[
-      \bm{A} = \bm{QR}
+      V = V_1 \perp V_2 \perp \cdots \perp V_k
   \]
-  其中 $\bm{Q}$ 是正交（酉）矩阵，$\bm{R}$ 是主对角线上的元素大于等于零的上三角阵，并且若 $\bm{A}$ 是可逆阵，则这样的分解唯一。
+\end{proposition}
+
+\begin{theorem}
+  任一 $n$ 阶酉矩阵必定酉相似于下列对角阵
+  \[
+      \operatorname{diag}\{c_1, c_2, \ldots, c_n\}
+  \]
+  其中 $c_i$ 为模长等于 $1$ 的复数。
 \end{theorem}
-
-
 %——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
-%——————————————————————————————————%
-
-\section{}
-
-
-
-
-
-
