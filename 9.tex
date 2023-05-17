@@ -525,7 +525,7 @@
 \section{复正规算子}
 
 \begin{definition}
-设 $\varphi$ 是内积空间 $V$ 上的线性变换，$\varphi^*$ 是其伴随。若 $\varphi\varphi^* = \varphi^*\varphi$，则称 $\varphi$ 是 $V$ 上的正规算子（欧式空间上的称为实正规算子，酉空间上的称为复正规算子）。复矩阵 $\bm{A}$ 若满足 $\overline{\bm{A}}^{\mathrm{T}}\bm{A} = \bm{A}\overline{\bm{A}}^{\mathrm{T}}$，则称 $\bm{A}$ 为复正规矩阵。实矩阵 $\bm{A}$ 若满足 $\bm{A}^{\mathrm{T}}\bm{A} = \bm{AA}^{\mathrm{T}}$，则称 $\bm{A}$ 为实正规矩阵。
+    设 $\varphi$ 是内积空间 $V$ 上的线性变换，$\varphi^*$ 是其伴随。若 $\varphi\varphi^* = \varphi^*\varphi$，则称 $\varphi$ 是 $V$ 上的正规算子（欧式空间上的称为实正规算子，酉空间上的称为复正规算子）。复矩阵 $\bm{A}$ 若满足 $\overline{\bm{A}}^{\mathrm{T}}\bm{A} = \bm{A}\overline{\bm{A}}^{\mathrm{T}}$，则称 $\bm{A}$ 为复正规矩阵。实矩阵 $\bm{A}$ 若满足 $\bm{A}^{\mathrm{T}}\bm{A} = \bm{AA}^{\mathrm{T}}$，则称 $\bm{A}$ 为实正规矩阵。
 \end{definition}
 
 \begin{lemma}
@@ -548,33 +548,130 @@
 \end{lemma}
 
 \begin{theorem}{Schur 定理}
-  设 $V$ 是 $n$ 维酉空间，$\varphi $ 是 $V$ 上的线性算子，则存在 $V$ 的一组标准正交基，使得 $\varphi$ 在这组基下的表示矩阵为上三角阵。
+    设 $V$ 是 $n$ 维酉空间，$\varphi $ 是 $V$ 上的线性算子，则存在 $V$ 的一组标准正交基，使得 $\varphi$ 在这组基下的表示矩阵为上三角阵。
 \end{theorem}
 
 \begin{corollary}{Schur 定理}
-  任一 $n$ 阶复矩阵均酉相似于一个上三角阵。
+    任一 $n$ 阶复矩阵均酉相似于一个上三角阵。
 \end{corollary}
 
 \begin{theorem}
-   设 $V$ 是 $n$ 维酉空间，$\varphi $ 是 $V$ 上的线性算子，则 $\varphi$ 为正规算子的充分必要条件是存在 $V$ 的一组标准正交基，使得 $\varphi$ 在这组基下的表示矩阵是对角阵。特别地，这组基下恰好是 $\varphi$ 的 $n$ 个线性无关的特征向量。
+    设 $V$ 是 $n$ 维酉空间，$\varphi $ 是 $V$ 上的线性算子，则 $\varphi$ 为正规算子的充分必要条件是存在 $V$ 的一组标准正交基，使得 $\varphi$ 在这组基下的表示矩阵是对角阵。特别地，这组基下恰好是 $\varphi$ 的 $n$ 个线性无关的特征向量。
 \end{theorem}
 
 \begin{theorem}
-  复矩阵 $\bm{A}$ 为复正规矩阵的充分必要条件是 $\bm{A}$ 酉相似于对角阵。
+    复矩阵 $\bm{A}$ 为复正规矩阵的充分必要条件是 $\bm{A}$ 酉相似于对角阵。
 \end{theorem}
 
 \begin{proposition}
-  设 $\varphi$ 是 $n$ 维酉空间 $V$ 上的线性算子，$\lambda_1, \lambda_2, \ldots, \lambda_k$ 是 $\varphi$ 的全体不同特征值，$V_1, V_2, \ldots, V_k$ 是对应的特征子空间，则 $\varphi$ 是正规算子的充分必要条件为
-  \[
-      V = V_1 \perp V_2 \perp \cdots \perp V_k
-  \]
+    设 $\varphi$ 是 $n$ 维酉空间 $V$ 上的线性算子，$\lambda_1, \lambda_2, \ldots, \lambda_k$ 是 $\varphi$ 的全体不同特征值，$V_1, V_2, \ldots, V_k$ 是对应的特征子空间，则 $\varphi$ 是正规算子的充分必要条件为
+    \[
+        V = V_1 \perp V_2 \perp \cdots \perp V_k
+    \]
 \end{proposition}
 
 \begin{theorem}
-  任一 $n$ 阶酉矩阵必定酉相似于下列对角阵
-  \[
-      \operatorname{diag}\{c_1, c_2, \ldots, c_n\}
-  \]
-  其中 $c_i$ 为模长等于 $1$ 的复数。
+    任一 $n$ 阶酉矩阵必定酉相似于下列对角阵
+    \[
+        \operatorname{diag}\{c_1, c_2, \ldots, c_n\}
+    \]
+    其中 $c_i$ 为模长等于 $1$ 的复数。
 \end{theorem}
+%——————————————————————————————————%
+\section{实正规矩阵}
+
+\begin{lemma}
+    设 $V$ 是 $n$ 维欧氏空间，$f(x)$ 是实系数多项式。若 $\varphi$ 是 $V$ 上的正规算子，则 $f(\varphi)$ 也是 $V$ 上的正规算子。
+\end{lemma}
+
+\begin{lemma}
+    设 $\varphi$ 是欧式空间 $V$ 上的正规算子，$f(x)$ 和 $g(x)$ 是互素的实系数多项式。假设 $\bm{u} \in \ker(f(\varphi)), \bm{v} \in \ker(g(\varphi))$，则
+    \[
+        \langle \bm{u}, \bm{v} \rangle = 0
+    \]
+\end{lemma}
+
+\begin{theorem}
+    设 $V$ 是 $n$ 维欧式空间，$\varphi$ 是 $V$ 上的正规算子。令 $g(x)$ 是 $\varphi$ 的极小多项式，$g_1(x), g_2(x), \ldots, g_k(x)$ 是 $g(x)$ 的所有互不相同的首一不可约因式，且 $W_i = \ker(g_i(\varphi))(i = 1, 2, \ldots, k)$，则
+    \begin{enumerate}
+        \item $g(x) = g_1(x)\cdots g_k(x)$，其中 $\deg g_i(x) \leqslant 2$；
+        \item $V = W_1 \perp \cdots \perp W_k$；
+        \item $W_i$ 是 $\varphi$ 的不变子空间。用 $\varphi_i$ 表示 $\varphi$ 在 $W_i$ 上的限制，则 $\varphi_i$ 是 $W_i$ 上的正规算子且 $g_i(x)$ 是 $\varphi$ 的极小多项式。
+    \end{enumerate}
+\end{theorem}
+
+\begin{lemma}
+    设 $V$ 是 $n$ 维欧式空间，$\varphi$ 是 $V$ 上的正规算子且 $\varphi$ 满足多项式 $g(x) = x^2 + 1$。设 $\bm{v} \in V, \bm{u} = \varphi(\bm{v})$，则
+    \[
+        \varphi^*(\bm{v}) = -\bm{u},\quad \varphi^*(\bm{u}) = \bm{v}
+    \]
+    且 $\Vert \bm{u} \Vert = \Vert \bm{v} \Vert, \bm{u} \perp \bm{v}$。
+\end{lemma}
+
+\begin{lemma}
+    设 $V$ 是 $n$ 维欧式空间，$\varphi$ 是 $V$ 上的正规算子且 $\varphi$ 满足多项式 $g(x) = (x - a)^2 + b^2$，其中 $a, b \in \mathbb{R}$ 且 $b \neq 0$。设 $\bm{v} \in V, \bm{u} = b^{-1}(\varphi - a \bm{I})(\bm{v})$，则 $\Vert \bm{u} \Vert = \Vert \bm{v} \Vert, \bm{u} \perp \bm{v}$，且
+    \begin{gather*}
+        \varphi(\bm{v}) = a \bm{v} + b \bm{u}, \quad \varphi(\bm{u}) = -b \bm{v} + a \bm{u} \\
+        \varphi^*(\bm{v}) = a \bm{v} - b \bm{u}, \quad \varphi^*(\bm{u}) = b \bm{v} + a \bm{u}
+    \end{gather*}
+\end{lemma}
+
+\begin{theorem}
+    设 $\varphi$ 是 $n$ 维欧式空间 $V$ 上的正规算子，$\varphi$ 的极小多项式为 $g(x) = (x - a)^2 + b^2$，其中 $a, b \in \mathbb{R}$ 且 $b \neq 0$，则存在 $V$ 的 $s$ 个二维子空间 $V_1, V_2, \ldots, V_s$ 使
+    \[
+        V = V_1 \perp V_2 \perp \cdots \perp V_s
+    \]
+    且每个 $V_i$ 都有标准正交基 $\{\bm{u}_i, \bm{v}_i\}$，满足
+    \[
+        \varphi(\bm{u}_i) = a \bm{u}_i - b \bm{v}_i, \quad \varphi(\bm{v}_i) = b \bm{u}_i + a \bm{v}_i
+    \]
+\end{theorem}
+
+\begin{theorem}
+    设 $V$ 是 $n$ 维欧式空间，$\varphi$ 是 $V$ 上的正规算子，则存在一组标准正交基，使 $\varphi$ 在这组基下的表示矩阵为下列分块对角阵：
+    \[
+        \operatorname{diag}\{\bm{A}_1, \ldots, \bm{A}_r, c_{2r + 1}, \ldots, c_n\}
+    \]
+    其中 $c_{j}(j = 2r + 1, \ldots, n)$ 是实数，$\bm{A}_i$ 是形如
+    \[
+        \begin{pmatrix}
+            a_i  & b_i \\
+            -b_i & a_i
+        \end{pmatrix}
+    \]
+    的二阶实矩阵。
+\end{theorem}
+
+\begin{theorem}
+    设 $\bm{A}$ 是 $n$ 阶正交矩阵，则 $\bm{A}$ 正交相似于下列分块对角阵：
+    \[
+        \operatorname{diag}\{\bm{A}_1, \ldots, \bm{A}_r; 1, \ldots, 1; -1, \ldots, -1\}
+    \]
+    其中
+    \[
+        \bm{A}_i = \begin{pmatrix}
+            \cos \theta_i  & \sin \theta_i \\
+            -\sin \theta_i & \cos \theta_i
+        \end{pmatrix}, i = 1, 2, \ldots, r
+    \]
+\end{theorem}
+
+\begin{theorem}
+    设 $\bm{A}$ 是实反对称阵，则 $\bm{A}$ 正交相似于下列分块对角阵：
+    \[
+        \operatorname{diag}\{\bm{B}_1, \ldots, \bm{B}_r; 0, \ldots, 0\}
+    \]
+    其中
+    \[
+        \bm{B}_i = \begin{pmatrix}
+            0    & b_i \\
+            -b_i & 0
+        \end{pmatrix}, i = 1, 2, \ldots, r
+    \]
+\end{theorem}
+
+\begin{corollary}
+    实反对称阵的秩必是偶数，且其实特征值为 $0$，虚特征值为纯虚数
+\end{corollary}
+
 %——————————————————————————————————%
